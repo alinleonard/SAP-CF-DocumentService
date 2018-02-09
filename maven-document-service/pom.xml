@@ -1,0 +1,43 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	
+	<parent>
+		<groupId>com.sap.cloud.servicesdk.prov</groupId>
+    	<artifactId>projects-parent</artifactId>
+		<version>1.11.4</version>
+	</parent>
+	
+	<groupId>com.cerner</groupId>
+	<artifactId>maven-document-service</artifactId>
+	<version>0.0.3-SNAPSHOT</version>
+	<packaging>war</packaging>
+	
+	<properties>
+	    <!-- Name of the package containing the OData service provisioning code  -->
+	   <packageName>com.cerner.maven_document_service</packageName>
+	</properties>
+
+	<name>This archetype enables OData V4 service development and contains aggregated dependencies for consuming OData V2 and CDS data sources.</name>
+	<build>
+		<finalName>maven-document-service</finalName>
+	</build>
+	
+	<dependencies>
+		<!-- https://mvnrepository.com/artifact/com.sap.cloud/neo-java-web-api -->
+		
+		<!-- https://mvnrepository.com/artifact/org.apache.chemistry.opencmis/chemistry-opencmis-client-impl -->
+<dependency>
+    <groupId>org.apache.chemistry.opencmis</groupId>
+    <artifactId>chemistry-opencmis-client-impl</artifactId>
+    <version>1.1.0</version>
+</dependency>
+	<!-- https://mvnrepository.com/artifact/org.apache.chemistry.opencmis/chemistry-opencmis-commons-api -->
+<dependency>
+    <groupId>org.apache.chemistry.opencmis</groupId>
+    <artifactId>chemistry-opencmis-commons-api</artifactId>
+    <version>1.1.0</version>
+</dependency>
+	
+	</dependencies>
+</project>

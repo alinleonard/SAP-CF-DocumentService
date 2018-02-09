@@ -1,0 +1,11 @@
+---
+applications:
+
+- name: maven-document-service
+  memory: 512M
+  domain: cfapps.eu10.hana.ondemand.com
+  host: maven-document-service_host
+  path: target/maven-document-service.war
+  buildpack: sap_java_buildpack
+  env:
+    SAP_JWT_TRUST_ACL: '[{"clientid":"*","identityzone":"*"}]'
