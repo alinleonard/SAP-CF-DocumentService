@@ -1,464 +1,470 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-  <classpathentry kind="src" path="src/test/java" output="target/test-classes" including="**/*.java"/>
-  <classpathentry kind="src" path="src/main/java" including="**/*.java"/>
-  <classpathentry kind="src" path="src/main/resources" excluding="**/*.java"/>
-  <classpathentry kind="output" path="target/classes"/>
-  <classpathentry kind="var" path="M2_REPO/javax/servlet/javax.servlet-api/3.1.0/javax.servlet-api-3.1.0.jar" sourcepath="M2_REPO/javax/servlet/javax.servlet-api/3.1.0/javax.servlet-api-3.1.0-sources.jar">
-    <attributes>
-      <attribute value="jar:file:/C:/Users/AB050979/.m2/repository/javax/servlet/javax.servlet-api/3.1.0/javax.servlet-api-3.1.0-javadoc.jar!/" name="javadoc_location"/>
-    </attributes>
-  </classpathentry>
-  <classpathentry kind="var" path="M2_REPO/com/fasterxml/aalto-xml/0.9.10/aalto-xml-0.9.10.jar" sourcepath="M2_REPO/com/fasterxml/aalto-xml/0.9.10/aalto-xml-0.9.10-sources.jar">
-    <attributes>
-      <attribute value="jar:file:/C:/Users/AB050979/.m2/repository/com/fasterxml/aalto-xml/0.9.10/aalto-xml-0.9.10-javadoc.jar!/" name="javadoc_location"/>
-    </attributes>
-  </classpathentry>
-  <classpathentry kind="var" path="M2_REPO/com/sap/cloud/servicesdk/prov/annotation-processor/1.11.4/annotation-processor-1.11.4.jar" sourcepath="M2_REPO/com/sap/cloud/servicesdk/prov/annotation-processor/1.11.4/annotation-processor-1.11.4-sources.jar">
-    <attributes>
-      <attribute value="jar:file:/C:/Users/AB050979/.m2/repository/com/sap/cloud/servicesdk/prov/annotation-processor/1.11.4/annotation-processor-1.11.4-javadoc.jar!/" name="javadoc_location"/>
-    </attributes>
-  </classpathentry>
-  <classpathentry kind="var" path="M2_REPO/org/antlr/antlr4-runtime/4.5.1-1/antlr4-runtime-4.5.1-1.jar" sourcepath="M2_REPO/org/antlr/antlr4-runtime/4.5.1-1/antlr4-runtime-4.5.1-1-sources.jar">
-    <attributes>
-      <attribute value="jar:file:/C:/Users/AB050979/.m2/repository/org/antlr/antlr4-runtime/4.5.1-1/antlr4-runtime-4.5.1-1-javadoc.jar!/" name="javadoc_location"/>
-    </attributes>
-  </classpathentry>
-  <classpathentry kind="var" path="M2_REPO/com/sap/cloud/servicesdk/prov/api/1.11.4/api-1.11.4.jar" sourcepath="M2_REPO/com/sap/cloud/servicesdk/prov/api/1.11.4/api-1.11.4-sources.jar">
-    <attributes>
-      <attribute value="jar:file:/C:/Users/AB050979/.m2/repository/com/sap/cloud/servicesdk/prov/api/1.11.4/api-1.11.4-javadoc.jar!/" name="javadoc_location"/>
-    </attributes>
-  </classpathentry>
-  <classpathentry kind="var" path="M2_REPO/com/netflix/archaius/archaius-core/0.4.1/archaius-core-0.4.1.jar" sourcepath="M2_REPO/com/netflix/archaius/archaius-core/0.4.1/archaius-core-0.4.1-sources.jar">
-    <attributes>
-      <attribute value="jar:file:/C:/Users/AB050979/.m2/repository/com/netflix/archaius/archaius-core/0.4.1/archaius-core-0.4.1-javadoc.jar!/" name="javadoc_location"/>
-    </attributes>
-  </classpathentry>
-  <classpathentry kind="var" path="M2_REPO/asm/asm/3.3.1/asm-3.3.1.jar"/>
-  <classpathentry kind="var" path="M2_REPO/com/sap/cloud/s4hana/cloudplatform/auditlog/1.0.0/auditlog-1.0.0.jar" sourcepath="M2_REPO/com/sap/cloud/s4hana/cloudplatform/auditlog/1.0.0/auditlog-1.0.0-sources.jar">
-    <attributes>
-      <attribute value="jar:file:/C:/Users/AB050979/.m2/repository/com/sap/cloud/s4hana/cloudplatform/auditlog/1.0.0/auditlog-1.0.0-javadoc.jar!/" name="javadoc_location"/>
-    </attributes>
-  </classpathentry>
-  <classpathentry kind="var" path="M2_REPO/com/sap/cloud/servicesdk/prov/auditlog/1.11.4/auditlog-1.11.4.jar" sourcepath="M2_REPO/com/sap/cloud/servicesdk/prov/auditlog/1.11.4/auditlog-1.11.4-sources.jar">
-    <attributes>
-      <attribute value="jar:file:/C:/Users/AB050979/.m2/repository/com/sap/cloud/servicesdk/prov/auditlog/1.11.4/auditlog-1.11.4-javadoc.jar!/" name="javadoc_location"/>
-    </attributes>
-  </classpathentry>
-  <classpathentry kind="var" path="M2_REPO/com/sap/cloud/s4hana/cloudplatform/auditlog-scp-cf/1.0.0/auditlog-scp-cf-1.0.0.jar" sourcepath="M2_REPO/com/sap/cloud/s4hana/cloudplatform/auditlog-scp-cf/1.0.0/auditlog-scp-cf-1.0.0-sources.jar">
-    <attributes>
-      <attribute value="jar:file:/C:/Users/AB050979/.m2/repository/com/sap/cloud/s4hana/cloudplatform/auditlog-scp-cf/1.0.0/auditlog-scp-cf-1.0.0-javadoc.jar!/" name="javadoc_location"/>
-    </attributes>
-  </classpathentry>
-  <classpathentry kind="var" path="M2_REPO/com/sap/cloud/s4hana/cloudplatform/caching/1.0.0/caching-1.0.0.jar" sourcepath="M2_REPO/com/sap/cloud/s4hana/cloudplatform/caching/1.0.0/caching-1.0.0-sources.jar">
-    <attributes>
-      <attribute value="jar:file:/C:/Users/AB050979/.m2/repository/com/sap/cloud/s4hana/cloudplatform/caching/1.0.0/caching-1.0.0-javadoc.jar!/" name="javadoc_location"/>
-    </attributes>
-  </classpathentry>
-  <classpathentry kind="var" path="M2_REPO/org/apache/chemistry/opencmis/chemistry-opencmis-client-api/1.1.0/chemistry-opencmis-client-api-1.1.0.jar" sourcepath="M2_REPO/org/apache/chemistry/opencmis/chemistry-opencmis-client-api/1.1.0/chemistry-opencmis-client-api-1.1.0-sources.jar">
-    <attributes>
-      <attribute value="jar:file:/C:/Users/AB050979/.m2/repository/org/apache/chemistry/opencmis/chemistry-opencmis-client-api/1.1.0/chemistry-opencmis-client-api-1.1.0-javadoc.jar!/" name="javadoc_location"/>
-    </attributes>
-  </classpathentry>
-  <classpathentry kind="var" path="M2_REPO/org/apache/chemistry/opencmis/chemistry-opencmis-client-bindings/1.1.0/chemistry-opencmis-client-bindings-1.1.0.jar" sourcepath="M2_REPO/org/apache/chemistry/opencmis/chemistry-opencmis-client-bindings/1.1.0/chemistry-opencmis-client-bindings-1.1.0-sources.jar">
-    <attributes>
-      <attribute value="jar:file:/C:/Users/AB050979/.m2/repository/org/apache/chemistry/opencmis/chemistry-opencmis-client-bindings/1.1.0/chemistry-opencmis-client-bindings-1.1.0-javadoc.jar!/" name="javadoc_location"/>
-    </attributes>
-  </classpathentry>
-  <classpathentry kind="var" path="M2_REPO/org/apache/chemistry/opencmis/chemistry-opencmis-client-impl/1.1.0/chemistry-opencmis-client-impl-1.1.0.jar" sourcepath="M2_REPO/org/apache/chemistry/opencmis/chemistry-opencmis-client-impl/1.1.0/chemistry-opencmis-client-impl-1.1.0-sources.jar">
-    <attributes>
-      <attribute value="jar:file:/C:/Users/AB050979/.m2/repository/org/apache/chemistry/opencmis/chemistry-opencmis-client-impl/1.1.0/chemistry-opencmis-client-impl-1.1.0-javadoc.jar!/" name="javadoc_location"/>
-    </attributes>
-  </classpathentry>
-  <classpathentry kind="var" path="M2_REPO/org/apache/chemistry/opencmis/chemistry-opencmis-commons-api/1.1.0/chemistry-opencmis-commons-api-1.1.0.jar" sourcepath="M2_REPO/org/apache/chemistry/opencmis/chemistry-opencmis-commons-api/1.1.0/chemistry-opencmis-commons-api-1.1.0-sources.jar">
-    <attributes>
-      <attribute value="jar:file:/C:/Users/AB050979/.m2/repository/org/apache/chemistry/opencmis/chemistry-opencmis-commons-api/1.1.0/chemistry-opencmis-commons-api-1.1.0-javadoc.jar!/" name="javadoc_location"/>
-    </attributes>
-  </classpathentry>
-  <classpathentry kind="var" path="M2_REPO/org/apache/chemistry/opencmis/chemistry-opencmis-commons-impl/1.1.0/chemistry-opencmis-commons-impl-1.1.0.jar" sourcepath="M2_REPO/org/apache/chemistry/opencmis/chemistry-opencmis-commons-impl/1.1.0/chemistry-opencmis-commons-impl-1.1.0-sources.jar">
-    <attributes>
-      <attribute value="jar:file:/C:/Users/AB050979/.m2/repository/org/apache/chemistry/opencmis/chemistry-opencmis-commons-impl/1.1.0/chemistry-opencmis-commons-impl-1.1.0-javadoc.jar!/" name="javadoc_location"/>
-    </attributes>
-  </classpathentry>
-  <classpathentry kind="var" path="M2_REPO/com/sap/cloud/s4hana/quality/common/1.0.0/common-1.0.0.jar" sourcepath="M2_REPO/com/sap/cloud/s4hana/quality/common/1.0.0/common-1.0.0-sources.jar">
-    <attributes>
-      <attribute value="jar:file:/C:/Users/AB050979/.m2/repository/com/sap/cloud/s4hana/quality/common/1.0.0/common-1.0.0-javadoc.jar!/" name="javadoc_location"/>
-    </attributes>
-  </classpathentry>
-  <classpathentry kind="var" path="M2_REPO/commons-codec/commons-codec/1.10/commons-codec-1.10.jar" sourcepath="M2_REPO/commons-codec/commons-codec/1.10/commons-codec-1.10-sources.jar">
-    <attributes>
-      <attribute value="jar:file:/C:/Users/AB050979/.m2/repository/commons-codec/commons-codec/1.10/commons-codec-1.10-javadoc.jar!/" name="javadoc_location"/>
-    </attributes>
-  </classpathentry>
-  <classpathentry kind="var" path="M2_REPO/commons-configuration/commons-configuration/1.8/commons-configuration-1.8.jar" sourcepath="M2_REPO/commons-configuration/commons-configuration/1.8/commons-configuration-1.8-sources.jar">
-    <attributes>
-      <attribute value="jar:file:/C:/Users/AB050979/.m2/repository/commons-configuration/commons-configuration/1.8/commons-configuration-1.8-javadoc.jar!/" name="javadoc_location"/>
-    </attributes>
-  </classpathentry>
-  <classpathentry kind="var" path="M2_REPO/commons-io/commons-io/1.4/commons-io-1.4.jar" sourcepath="M2_REPO/commons-io/commons-io/1.4/commons-io-1.4-sources.jar">
-    <attributes>
-      <attribute value="jar:file:/C:/Users/AB050979/.m2/repository/commons-io/commons-io/1.4/commons-io-1.4-javadoc.jar!/" name="javadoc_location"/>
-    </attributes>
-  </classpathentry>
-  <classpathentry kind="var" path="M2_REPO/commons-lang/commons-lang/2.6/commons-lang-2.6.jar" sourcepath="M2_REPO/commons-lang/commons-lang/2.6/commons-lang-2.6-sources.jar">
-    <attributes>
-      <attribute value="jar:file:/C:/Users/AB050979/.m2/repository/commons-lang/commons-lang/2.6/commons-lang-2.6-javadoc.jar!/" name="javadoc_location"/>
-    </attributes>
-  </classpathentry>
-  <classpathentry kind="var" path="M2_REPO/org/apache/commons/commons-lang3/3.3.2/commons-lang3-3.3.2.jar" sourcepath="M2_REPO/org/apache/commons/commons-lang3/3.3.2/commons-lang3-3.3.2-sources.jar">
-    <attributes>
-      <attribute value="jar:file:/C:/Users/AB050979/.m2/repository/org/apache/commons/commons-lang3/3.3.2/commons-lang3-3.3.2-javadoc.jar!/" name="javadoc_location"/>
-    </attributes>
-  </classpathentry>
-  <classpathentry kind="var" path="M2_REPO/commons-logging/commons-logging/1.1.1/commons-logging-1.1.1.jar" sourcepath="M2_REPO/commons-logging/commons-logging/1.1.1/commons-logging-1.1.1-sources.jar">
-    <attributes>
-      <attribute value="jar:file:/C:/Users/AB050979/.m2/repository/commons-logging/commons-logging/1.1.1/commons-logging-1.1.1-javadoc.jar!/" name="javadoc_location"/>
-    </attributes>
-  </classpathentry>
-  <classpathentry kind="var" path="M2_REPO/com/sap/cloud/s4hana/cloudplatform/connectivity/1.0.0/connectivity-1.0.0.jar" sourcepath="M2_REPO/com/sap/cloud/s4hana/cloudplatform/connectivity/1.0.0/connectivity-1.0.0-sources.jar">
-    <attributes>
-      <attribute value="jar:file:/C:/Users/AB050979/.m2/repository/com/sap/cloud/s4hana/cloudplatform/connectivity/1.0.0/connectivity-1.0.0-javadoc.jar!/" name="javadoc_location"/>
-    </attributes>
-  </classpathentry>
-  <classpathentry kind="var" path="M2_REPO/com/sap/cloud/s4hana/cloudplatform/connectivity-scp-cf/1.0.0/connectivity-scp-cf-1.0.0.jar" sourcepath="M2_REPO/com/sap/cloud/s4hana/cloudplatform/connectivity-scp-cf/1.0.0/connectivity-scp-cf-1.0.0-sources.jar">
-    <attributes>
-      <attribute value="jar:file:/C:/Users/AB050979/.m2/repository/com/sap/cloud/s4hana/cloudplatform/connectivity-scp-cf/1.0.0/connectivity-scp-cf-1.0.0-javadoc.jar!/" name="javadoc_location"/>
-    </attributes>
-  </classpathentry>
-  <classpathentry kind="var" path="M2_REPO/com/sap/cloud/s4hana/core/1.0.0/core-1.0.0.jar" sourcepath="M2_REPO/com/sap/cloud/s4hana/core/1.0.0/core-1.0.0-sources.jar">
-    <attributes>
-      <attribute value="jar:file:/C:/Users/AB050979/.m2/repository/com/sap/cloud/s4hana/core/1.0.0/core-1.0.0-javadoc.jar!/" name="javadoc_location"/>
-    </attributes>
-  </classpathentry>
-  <classpathentry kind="var" path="M2_REPO/com/sap/cloud/s4hana/cloudplatform/core/1.0.0/core-1.0.0.jar" sourcepath="M2_REPO/com/sap/cloud/s4hana/cloudplatform/core/1.0.0/core-1.0.0-sources.jar">
-    <attributes>
-      <attribute value="jar:file:/C:/Users/AB050979/.m2/repository/com/sap/cloud/s4hana/cloudplatform/core/1.0.0/core-1.0.0-javadoc.jar!/" name="javadoc_location"/>
-    </attributes>
-  </classpathentry>
-  <classpathentry kind="var" path="M2_REPO/com/sap/cloud/s4hana/cloudplatform/core-scp-cf/1.0.0/core-scp-cf-1.0.0.jar" sourcepath="M2_REPO/com/sap/cloud/s4hana/cloudplatform/core-scp-cf/1.0.0/core-scp-cf-1.0.0-sources.jar">
-    <attributes>
-      <attribute value="jar:file:/C:/Users/AB050979/.m2/repository/com/sap/cloud/s4hana/cloudplatform/core-scp-cf/1.0.0/core-scp-cf-1.0.0-javadoc.jar!/" name="javadoc_location"/>
-    </attributes>
-  </classpathentry>
-  <classpathentry kind="var" path="M2_REPO/com/sap/cloud/servicesdk/prov/custom-dataprovider/1.11.4/custom-dataprovider-1.11.4.jar" sourcepath="M2_REPO/com/sap/cloud/servicesdk/prov/custom-dataprovider/1.11.4/custom-dataprovider-1.11.4-sources.jar">
-    <attributes>
-      <attribute value="jar:file:/C:/Users/AB050979/.m2/repository/com/sap/cloud/servicesdk/prov/custom-dataprovider/1.11.4/custom-dataprovider-1.11.4-javadoc.jar!/" name="javadoc_location"/>
-    </attributes>
-  </classpathentry>
-  <classpathentry kind="var" path="M2_REPO/org/apache/cxf/cxf-core/3.0.12/cxf-core-3.0.12.jar" sourcepath="M2_REPO/org/apache/cxf/cxf-core/3.0.12/cxf-core-3.0.12-sources.jar">
-    <attributes>
-      <attribute value="jar:file:/C:/Users/AB050979/.m2/repository/org/apache/cxf/cxf-core/3.0.12/cxf-core-3.0.12-javadoc.jar!/" name="javadoc_location"/>
-    </attributes>
-  </classpathentry>
-  <classpathentry kind="var" path="M2_REPO/org/apache/cxf/cxf-rt-bindings-soap/3.0.12/cxf-rt-bindings-soap-3.0.12.jar" sourcepath="M2_REPO/org/apache/cxf/cxf-rt-bindings-soap/3.0.12/cxf-rt-bindings-soap-3.0.12-sources.jar">
-    <attributes>
-      <attribute value="jar:file:/C:/Users/AB050979/.m2/repository/org/apache/cxf/cxf-rt-bindings-soap/3.0.12/cxf-rt-bindings-soap-3.0.12-javadoc.jar!/" name="javadoc_location"/>
-    </attributes>
-  </classpathentry>
-  <classpathentry kind="var" path="M2_REPO/org/apache/cxf/cxf-rt-bindings-xml/3.0.12/cxf-rt-bindings-xml-3.0.12.jar" sourcepath="M2_REPO/org/apache/cxf/cxf-rt-bindings-xml/3.0.12/cxf-rt-bindings-xml-3.0.12-sources.jar">
-    <attributes>
-      <attribute value="jar:file:/C:/Users/AB050979/.m2/repository/org/apache/cxf/cxf-rt-bindings-xml/3.0.12/cxf-rt-bindings-xml-3.0.12-javadoc.jar!/" name="javadoc_location"/>
-    </attributes>
-  </classpathentry>
-  <classpathentry kind="var" path="M2_REPO/org/apache/cxf/cxf-rt-databinding-jaxb/3.0.12/cxf-rt-databinding-jaxb-3.0.12.jar" sourcepath="M2_REPO/org/apache/cxf/cxf-rt-databinding-jaxb/3.0.12/cxf-rt-databinding-jaxb-3.0.12-sources.jar">
-    <attributes>
-      <attribute value="jar:file:/C:/Users/AB050979/.m2/repository/org/apache/cxf/cxf-rt-databinding-jaxb/3.0.12/cxf-rt-databinding-jaxb-3.0.12-javadoc.jar!/" name="javadoc_location"/>
-    </attributes>
-  </classpathentry>
-  <classpathentry kind="var" path="M2_REPO/org/apache/cxf/cxf-rt-frontend-jaxws/3.0.12/cxf-rt-frontend-jaxws-3.0.12.jar" sourcepath="M2_REPO/org/apache/cxf/cxf-rt-frontend-jaxws/3.0.12/cxf-rt-frontend-jaxws-3.0.12-sources.jar">
-    <attributes>
-      <attribute value="jar:file:/C:/Users/AB050979/.m2/repository/org/apache/cxf/cxf-rt-frontend-jaxws/3.0.12/cxf-rt-frontend-jaxws-3.0.12-javadoc.jar!/" name="javadoc_location"/>
-    </attributes>
-  </classpathentry>
-  <classpathentry kind="var" path="M2_REPO/org/apache/cxf/cxf-rt-frontend-simple/3.0.12/cxf-rt-frontend-simple-3.0.12.jar" sourcepath="M2_REPO/org/apache/cxf/cxf-rt-frontend-simple/3.0.12/cxf-rt-frontend-simple-3.0.12-sources.jar">
-    <attributes>
-      <attribute value="jar:file:/C:/Users/AB050979/.m2/repository/org/apache/cxf/cxf-rt-frontend-simple/3.0.12/cxf-rt-frontend-simple-3.0.12-javadoc.jar!/" name="javadoc_location"/>
-    </attributes>
-  </classpathentry>
-  <classpathentry kind="var" path="M2_REPO/org/apache/cxf/cxf-rt-transports-http/3.0.12/cxf-rt-transports-http-3.0.12.jar" sourcepath="M2_REPO/org/apache/cxf/cxf-rt-transports-http/3.0.12/cxf-rt-transports-http-3.0.12-sources.jar">
-    <attributes>
-      <attribute value="jar:file:/C:/Users/AB050979/.m2/repository/org/apache/cxf/cxf-rt-transports-http/3.0.12/cxf-rt-transports-http-3.0.12-javadoc.jar!/" name="javadoc_location"/>
-    </attributes>
-  </classpathentry>
-  <classpathentry kind="var" path="M2_REPO/org/apache/cxf/cxf-rt-ws-addr/3.0.12/cxf-rt-ws-addr-3.0.12.jar" sourcepath="M2_REPO/org/apache/cxf/cxf-rt-ws-addr/3.0.12/cxf-rt-ws-addr-3.0.12-sources.jar">
-    <attributes>
-      <attribute value="jar:file:/C:/Users/AB050979/.m2/repository/org/apache/cxf/cxf-rt-ws-addr/3.0.12/cxf-rt-ws-addr-3.0.12-javadoc.jar!/" name="javadoc_location"/>
-    </attributes>
-  </classpathentry>
-  <classpathentry kind="var" path="M2_REPO/org/apache/cxf/cxf-rt-ws-policy/3.0.12/cxf-rt-ws-policy-3.0.12.jar" sourcepath="M2_REPO/org/apache/cxf/cxf-rt-ws-policy/3.0.12/cxf-rt-ws-policy-3.0.12-sources.jar">
-    <attributes>
-      <attribute value="jar:file:/C:/Users/AB050979/.m2/repository/org/apache/cxf/cxf-rt-ws-policy/3.0.12/cxf-rt-ws-policy-3.0.12-javadoc.jar!/" name="javadoc_location"/>
-    </attributes>
-  </classpathentry>
-  <classpathentry kind="var" path="M2_REPO/org/apache/cxf/cxf-rt-wsdl/3.0.12/cxf-rt-wsdl-3.0.12.jar" sourcepath="M2_REPO/org/apache/cxf/cxf-rt-wsdl/3.0.12/cxf-rt-wsdl-3.0.12-sources.jar">
-    <attributes>
-      <attribute value="jar:file:/C:/Users/AB050979/.m2/repository/org/apache/cxf/cxf-rt-wsdl/3.0.12/cxf-rt-wsdl-3.0.12-javadoc.jar!/" name="javadoc_location"/>
-    </attributes>
-  </classpathentry>
-  <classpathentry kind="var" path="M2_REPO/com/sap/cloud/servicesdk/developer_license/1.11.4/developer_license-1.11.4.jar" sourcepath="M2_REPO/com/sap/cloud/servicesdk/developer_license/1.11.4/developer_license-1.11.4-sources.jar">
-    <attributes>
-      <attribute value="jar:file:/C:/Users/AB050979/.m2/repository/com/sap/cloud/servicesdk/developer_license/1.11.4/developer_license-1.11.4-javadoc.jar!/" name="javadoc_location"/>
-    </attributes>
-  </classpathentry>
-  <classpathentry kind="var" path="M2_REPO/com/sap/cloud/servicesdk/prov/edmxparser/1.11.4/edmxparser-1.11.4.jar" sourcepath="M2_REPO/com/sap/cloud/servicesdk/prov/edmxparser/1.11.4/edmxparser-1.11.4-sources.jar">
-    <attributes>
-      <attribute value="jar:file:/C:/Users/AB050979/.m2/repository/com/sap/cloud/servicesdk/prov/edmxparser/1.11.4/edmxparser-1.11.4-javadoc.jar!/" name="javadoc_location"/>
-    </attributes>
-  </classpathentry>
-  <classpathentry kind="var" path="M2_REPO/com/sap/cloud/s4hana/fluent-result/1.0.0/fluent-result-1.0.0.jar" sourcepath="M2_REPO/com/sap/cloud/s4hana/fluent-result/1.0.0/fluent-result-1.0.0-sources.jar">
-    <attributes>
-      <attribute value="jar:file:/C:/Users/AB050979/.m2/repository/com/sap/cloud/s4hana/fluent-result/1.0.0/fluent-result-1.0.0-javadoc.jar!/" name="javadoc_location"/>
-    </attributes>
-  </classpathentry>
-  <classpathentry kind="var" path="M2_REPO/com/google/code/gson/gson/2.8.0/gson-2.8.0.jar" sourcepath="M2_REPO/com/google/code/gson/gson/2.8.0/gson-2.8.0-sources.jar">
-    <attributes>
-      <attribute value="jar:file:/C:/Users/AB050979/.m2/repository/com/google/code/gson/gson/2.8.0/gson-2.8.0-javadoc.jar!/" name="javadoc_location"/>
-    </attributes>
-  </classpathentry>
-  <classpathentry kind="var" path="M2_REPO/com/google/guava/guava/20.0/guava-20.0.jar" sourcepath="M2_REPO/com/google/guava/guava/20.0/guava-20.0-sources.jar">
-    <attributes>
-      <attribute value="jar:file:/C:/Users/AB050979/.m2/repository/com/google/guava/guava/20.0/guava-20.0-javadoc.jar!/" name="javadoc_location"/>
-    </attributes>
-  </classpathentry>
-  <classpathentry kind="var" path="M2_REPO/com/sap/cloud/servicesdk/hana-connectivity-cds/1.11.4/hana-connectivity-cds-1.11.4.jar" sourcepath="M2_REPO/com/sap/cloud/servicesdk/hana-connectivity-cds/1.11.4/hana-connectivity-cds-1.11.4-sources.jar">
-    <attributes>
-      <attribute value="jar:file:/C:/Users/AB050979/.m2/repository/com/sap/cloud/servicesdk/hana-connectivity-cds/1.11.4/hana-connectivity-cds-1.11.4-javadoc.jar!/" name="javadoc_location"/>
-    </attributes>
-  </classpathentry>
-  <classpathentry kind="var" path="M2_REPO/com/sap/cloud/servicesdk/hana.connectivity.cds-core/1.11.4/hana.connectivity.cds-core-1.11.4.jar" sourcepath="M2_REPO/com/sap/cloud/servicesdk/hana.connectivity.cds-core/1.11.4/hana.connectivity.cds-core-1.11.4-sources.jar">
-    <attributes>
-      <attribute value="jar:file:/C:/Users/AB050979/.m2/repository/com/sap/cloud/servicesdk/hana.connectivity.cds-core/1.11.4/hana.connectivity.cds-core-1.11.4-javadoc.jar!/" name="javadoc_location"/>
-    </attributes>
-  </classpathentry>
-  <classpathentry kind="var" path="M2_REPO/com/github/jknack/handlebars/4.0.6/handlebars-4.0.6.jar" sourcepath="M2_REPO/com/github/jknack/handlebars/4.0.6/handlebars-4.0.6-sources.jar">
-    <attributes>
-      <attribute value="jar:file:/C:/Users/AB050979/.m2/repository/com/github/jknack/handlebars/4.0.6/handlebars-4.0.6-javadoc.jar!/" name="javadoc_location"/>
-    </attributes>
-  </classpathentry>
-  <classpathentry kind="var" path="M2_REPO/com/github/jknack/handlebars-helpers/4.0.6/handlebars-helpers-4.0.6.jar" sourcepath="M2_REPO/com/github/jknack/handlebars-helpers/4.0.6/handlebars-helpers-4.0.6-sources.jar">
-    <attributes>
-      <attribute value="jar:file:/C:/Users/AB050979/.m2/repository/com/github/jknack/handlebars-helpers/4.0.6/handlebars-helpers-4.0.6-javadoc.jar!/" name="javadoc_location"/>
-    </attributes>
-  </classpathentry>
-  <classpathentry kind="var" path="M2_REPO/com/github/jknack/handlebars-jackson2/1.0.0/handlebars-jackson2-1.0.0.jar" sourcepath="M2_REPO/com/github/jknack/handlebars-jackson2/1.0.0/handlebars-jackson2-1.0.0-sources.jar">
-    <attributes>
-      <attribute value="jar:file:/C:/Users/AB050979/.m2/repository/com/github/jknack/handlebars-jackson2/1.0.0/handlebars-jackson2-1.0.0-javadoc.jar!/" name="javadoc_location"/>
-    </attributes>
-  </classpathentry>
-  <classpathentry kind="var" path="M2_REPO/org/hdrhistogram/HdrHistogram/2.1.9/HdrHistogram-2.1.9.jar" sourcepath="M2_REPO/org/hdrhistogram/HdrHistogram/2.1.9/HdrHistogram-2.1.9-sources.jar">
-    <attributes>
-      <attribute value="jar:file:/C:/Users/AB050979/.m2/repository/org/hdrhistogram/HdrHistogram/2.1.9/HdrHistogram-2.1.9-javadoc.jar!/" name="javadoc_location"/>
-    </attributes>
-  </classpathentry>
-  <classpathentry kind="var" path="M2_REPO/org/apache/httpcomponents/httpclient/4.5.3/httpclient-4.5.3.jar" sourcepath="M2_REPO/org/apache/httpcomponents/httpclient/4.5.3/httpclient-4.5.3-sources.jar">
-    <attributes>
-      <attribute value="jar:file:/C:/Users/AB050979/.m2/repository/org/apache/httpcomponents/httpclient/4.5.3/httpclient-4.5.3-javadoc.jar!/" name="javadoc_location"/>
-    </attributes>
-  </classpathentry>
-  <classpathentry kind="var" path="M2_REPO/org/apache/httpcomponents/httpcore/4.4.6/httpcore-4.4.6.jar" sourcepath="M2_REPO/org/apache/httpcomponents/httpcore/4.4.6/httpcore-4.4.6-sources.jar">
-    <attributes>
-      <attribute value="jar:file:/C:/Users/AB050979/.m2/repository/org/apache/httpcomponents/httpcore/4.4.6/httpcore-4.4.6-javadoc.jar!/" name="javadoc_location"/>
-    </attributes>
-  </classpathentry>
-  <classpathentry kind="var" path="M2_REPO/com/sap/cloud/s4hana/frameworks/hystrix/1.0.0/hystrix-1.0.0.jar" sourcepath="M2_REPO/com/sap/cloud/s4hana/frameworks/hystrix/1.0.0/hystrix-1.0.0-sources.jar">
-    <attributes>
-      <attribute value="jar:file:/C:/Users/AB050979/.m2/repository/com/sap/cloud/s4hana/frameworks/hystrix/1.0.0/hystrix-1.0.0-javadoc.jar!/" name="javadoc_location"/>
-    </attributes>
-  </classpathentry>
-  <classpathentry kind="var" path="M2_REPO/com/netflix/hystrix/hystrix-core/1.5.9/hystrix-core-1.5.9.jar" sourcepath="M2_REPO/com/netflix/hystrix/hystrix-core/1.5.9/hystrix-core-1.5.9-sources.jar">
-    <attributes>
-      <attribute value="jar:file:/C:/Users/AB050979/.m2/repository/com/netflix/hystrix/hystrix-core/1.5.9/hystrix-core-1.5.9-javadoc.jar!/" name="javadoc_location"/>
-    </attributes>
-  </classpathentry>
-  <classpathentry kind="var" path="M2_REPO/com/fasterxml/jackson/core/jackson-annotations/2.8.7/jackson-annotations-2.8.7.jar" sourcepath="M2_REPO/com/fasterxml/jackson/core/jackson-annotations/2.8.7/jackson-annotations-2.8.7-sources.jar">
-    <attributes>
-      <attribute value="jar:file:/C:/Users/AB050979/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.8.7/jackson-annotations-2.8.7-javadoc.jar!/" name="javadoc_location"/>
-    </attributes>
-  </classpathentry>
-  <classpathentry kind="var" path="M2_REPO/com/fasterxml/jackson/core/jackson-core/2.8.7/jackson-core-2.8.7.jar" sourcepath="M2_REPO/com/fasterxml/jackson/core/jackson-core/2.8.7/jackson-core-2.8.7-sources.jar">
-    <attributes>
-      <attribute value="jar:file:/C:/Users/AB050979/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.8.7/jackson-core-2.8.7-javadoc.jar!/" name="javadoc_location"/>
-    </attributes>
-  </classpathentry>
-  <classpathentry kind="var" path="M2_REPO/com/fasterxml/jackson/core/jackson-databind/2.8.7/jackson-databind-2.8.7.jar" sourcepath="M2_REPO/com/fasterxml/jackson/core/jackson-databind/2.8.7/jackson-databind-2.8.7-sources.jar">
-    <attributes>
-      <attribute value="jar:file:/C:/Users/AB050979/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.8.7/jackson-databind-2.8.7-javadoc.jar!/" name="javadoc_location"/>
-    </attributes>
-  </classpathentry>
-  <classpathentry kind="var" path="M2_REPO/com/fasterxml/jackson/dataformat/jackson-dataformat-xml/2.8.7/jackson-dataformat-xml-2.8.7.jar" sourcepath="M2_REPO/com/fasterxml/jackson/dataformat/jackson-dataformat-xml/2.8.7/jackson-dataformat-xml-2.8.7-sources.jar">
-    <attributes>
-      <attribute value="jar:file:/C:/Users/AB050979/.m2/repository/com/fasterxml/jackson/dataformat/jackson-dataformat-xml/2.8.7/jackson-dataformat-xml-2.8.7-javadoc.jar!/" name="javadoc_location"/>
-    </attributes>
-  </classpathentry>
-  <classpathentry kind="var" path="M2_REPO/com/fasterxml/jackson/module/jackson-module-jaxb-annotations/2.8.7/jackson-module-jaxb-annotations-2.8.7.jar" sourcepath="M2_REPO/com/fasterxml/jackson/module/jackson-module-jaxb-annotations/2.8.7/jackson-module-jaxb-annotations-2.8.7-sources.jar">
-    <attributes>
-      <attribute value="jar:file:/C:/Users/AB050979/.m2/repository/com/fasterxml/jackson/module/jackson-module-jaxb-annotations/2.8.7/jackson-module-jaxb-annotations-2.8.7-javadoc.jar!/" name="javadoc_location"/>
-    </attributes>
-  </classpathentry>
-  <classpathentry kind="var" path="M2_REPO/com/sun/xml/bind/jaxb-core/2.2.11/jaxb-core-2.2.11.jar" sourcepath="M2_REPO/com/sun/xml/bind/jaxb-core/2.2.11/jaxb-core-2.2.11-sources.jar">
-    <attributes>
-      <attribute value="jar:file:/C:/Users/AB050979/.m2/repository/com/sun/xml/bind/jaxb-core/2.2.11/jaxb-core-2.2.11-javadoc.jar!/" name="javadoc_location"/>
-    </attributes>
-  </classpathentry>
-  <classpathentry kind="var" path="M2_REPO/com/sun/xml/bind/jaxb-impl/2.2.11/jaxb-impl-2.2.11.jar" sourcepath="M2_REPO/com/sun/xml/bind/jaxb-impl/2.2.11/jaxb-impl-2.2.11-sources.jar">
-    <attributes>
-      <attribute value="jar:file:/C:/Users/AB050979/.m2/repository/com/sun/xml/bind/jaxb-impl/2.2.11/jaxb-impl-2.2.11-javadoc.jar!/" name="javadoc_location"/>
-    </attributes>
-  </classpathentry>
-  <classpathentry kind="var" path="M2_REPO/joda-time/joda-time/2.9.7/joda-time-2.9.7.jar" sourcepath="M2_REPO/joda-time/joda-time/2.9.7/joda-time-2.9.7-sources.jar">
-    <attributes>
-      <attribute value="jar:file:/C:/Users/AB050979/.m2/repository/joda-time/joda-time/2.9.7/joda-time-2.9.7-javadoc.jar!/" name="javadoc_location"/>
-    </attributes>
-  </classpathentry>
-  <classpathentry kind="var" path="M2_REPO/com/google/code/findbugs/jsr305/3.0.1/jsr305-3.0.1.jar" sourcepath="M2_REPO/com/google/code/findbugs/jsr305/3.0.1/jsr305-3.0.1-sources.jar">
-    <attributes>
-      <attribute value="jar:file:/C:/Users/AB050979/.m2/repository/com/google/code/findbugs/jsr305/3.0.1/jsr305-3.0.1-javadoc.jar!/" name="javadoc_location"/>
-    </attributes>
-  </classpathentry>
-  <classpathentry kind="var" path="M2_REPO/org/projectlombok/lombok/1.16.18/lombok-1.16.18.jar" sourcepath="M2_REPO/org/projectlombok/lombok/1.16.18/lombok-1.16.18-sources.jar">
-    <attributes>
-      <attribute value="jar:file:/C:/Users/AB050979/.m2/repository/org/projectlombok/lombok/1.16.18/lombok-1.16.18-javadoc.jar!/" name="javadoc_location"/>
-    </attributes>
-  </classpathentry>
-  <classpathentry kind="var" path="M2_REPO/com/sap/cloud/s4hana/cloudplatform/metering/1.0.0/metering-1.0.0.jar" sourcepath="M2_REPO/com/sap/cloud/s4hana/cloudplatform/metering/1.0.0/metering-1.0.0-sources.jar">
-    <attributes>
-      <attribute value="jar:file:/C:/Users/AB050979/.m2/repository/com/sap/cloud/s4hana/cloudplatform/metering/1.0.0/metering-1.0.0-javadoc.jar!/" name="javadoc_location"/>
-    </attributes>
-  </classpathentry>
-  <classpathentry kind="var" path="M2_REPO/org/apache/neethi/neethi/3.0.3/neethi-3.0.3.jar" sourcepath="M2_REPO/org/apache/neethi/neethi/3.0.3/neethi-3.0.3-sources.jar">
-    <attributes>
-      <attribute value="jar:file:/C:/Users/AB050979/.m2/repository/org/apache/neethi/neethi/3.0.3/neethi-3.0.3-javadoc.jar!/" name="javadoc_location"/>
-    </attributes>
-  </classpathentry>
-  <classpathentry kind="var" path="M2_REPO/com/sap/cloud/servicesdk/odata-v2-lib/1.11.4/odata-v2-lib-1.11.4.jar" sourcepath="M2_REPO/com/sap/cloud/servicesdk/odata-v2-lib/1.11.4/odata-v2-lib-1.11.4-sources.jar">
-    <attributes>
-      <attribute value="jar:file:/C:/Users/AB050979/.m2/repository/com/sap/cloud/servicesdk/odata-v2-lib/1.11.4/odata-v2-lib-1.11.4-javadoc.jar!/" name="javadoc_location"/>
-    </attributes>
-  </classpathentry>
-  <classpathentry kind="var" path="M2_REPO/com/sap/cloud/servicesdk/prov/odata4.api/1.11.4/odata4.api-1.11.4.jar" sourcepath="M2_REPO/com/sap/cloud/servicesdk/prov/odata4.api/1.11.4/odata4.api-1.11.4-sources.jar">
-    <attributes>
-      <attribute value="jar:file:/C:/Users/AB050979/.m2/repository/com/sap/cloud/servicesdk/prov/odata4.api/1.11.4/odata4.api-1.11.4-javadoc.jar!/" name="javadoc_location"/>
-    </attributes>
-  </classpathentry>
-  <classpathentry kind="var" path="M2_REPO/com/sap/cloud/servicesdk/prov/odata4.cds/1.11.4/odata4.cds-1.11.4.jar" sourcepath="M2_REPO/com/sap/cloud/servicesdk/prov/odata4.cds/1.11.4/odata4.cds-1.11.4-sources.jar">
-    <attributes>
-      <attribute value="jar:file:/C:/Users/AB050979/.m2/repository/com/sap/cloud/servicesdk/prov/odata4.cds/1.11.4/odata4.cds-1.11.4-javadoc.jar!/" name="javadoc_location"/>
-    </attributes>
-  </classpathentry>
-  <classpathentry kind="var" path="M2_REPO/com/sap/cloud/servicesdk/prov/odata4.cdx/1.11.4/odata4.cdx-1.11.4.jar" sourcepath="M2_REPO/com/sap/cloud/servicesdk/prov/odata4.cdx/1.11.4/odata4.cdx-1.11.4-sources.jar">
-    <attributes>
-      <attribute value="jar:file:/C:/Users/AB050979/.m2/repository/com/sap/cloud/servicesdk/prov/odata4.cdx/1.11.4/odata4.cdx-1.11.4-javadoc.jar!/" name="javadoc_location"/>
-    </attributes>
-  </classpathentry>
-  <classpathentry kind="var" path="M2_REPO/com/sap/cloud/servicesdk/prov/odata4.core/1.11.4/odata4.core-1.11.4.jar" sourcepath="M2_REPO/com/sap/cloud/servicesdk/prov/odata4.core/1.11.4/odata4.core-1.11.4-sources.jar">
-    <attributes>
-      <attribute value="jar:file:/C:/Users/AB050979/.m2/repository/com/sap/cloud/servicesdk/prov/odata4.core/1.11.4/odata4.core-1.11.4-javadoc.jar!/" name="javadoc_location"/>
-    </attributes>
-  </classpathentry>
-  <classpathentry kind="var" path="M2_REPO/com/sap/cloud/servicesdk/prov/odata4.jdbc/1.11.4/odata4.jdbc-1.11.4.jar" sourcepath="M2_REPO/com/sap/cloud/servicesdk/prov/odata4.jdbc/1.11.4/odata4.jdbc-1.11.4-sources.jar">
-    <attributes>
-      <attribute value="jar:file:/C:/Users/AB050979/.m2/repository/com/sap/cloud/servicesdk/prov/odata4.jdbc/1.11.4/odata4.jdbc-1.11.4-javadoc.jar!/" name="javadoc_location"/>
-    </attributes>
-  </classpathentry>
-  <classpathentry kind="var" path="M2_REPO/com/sap/cloud/servicesdk/prov/odata4.web/1.11.4/odata4.web-1.11.4.jar" sourcepath="M2_REPO/com/sap/cloud/servicesdk/prov/odata4.web/1.11.4/odata4.web-1.11.4-sources.jar">
-    <attributes>
-      <attribute value="jar:file:/C:/Users/AB050979/.m2/repository/com/sap/cloud/servicesdk/prov/odata4.web/1.11.4/odata4.web-1.11.4-javadoc.jar!/" name="javadoc_location"/>
-    </attributes>
-  </classpathentry>
-  <classpathentry kind="var" path="M2_REPO/com/sap/cloud/servicesdk/prov/odata4.xsa/1.11.4/odata4.xsa-1.11.4.jar" sourcepath="M2_REPO/com/sap/cloud/servicesdk/prov/odata4.xsa/1.11.4/odata4.xsa-1.11.4-sources.jar">
-    <attributes>
-      <attribute value="jar:file:/C:/Users/AB050979/.m2/repository/com/sap/cloud/servicesdk/prov/odata4.xsa/1.11.4/odata4.xsa-1.11.4-javadoc.jar!/" name="javadoc_location"/>
-    </attributes>
-  </classpathentry>
-  <classpathentry kind="var" path="M2_REPO/com/sap/cloud/servicesdk/odatav2-connectivity/1.11.4/odatav2-connectivity-1.11.4.jar" sourcepath="M2_REPO/com/sap/cloud/servicesdk/odatav2-connectivity/1.11.4/odatav2-connectivity-1.11.4-sources.jar">
-    <attributes>
-      <attribute value="jar:file:/C:/Users/AB050979/.m2/repository/com/sap/cloud/servicesdk/odatav2-connectivity/1.11.4/odatav2-connectivity-1.11.4-javadoc.jar!/" name="javadoc_location"/>
-    </attributes>
-  </classpathentry>
-  <classpathentry kind="var" path="M2_REPO/com/sap/cloud/servicesdk/prov/odatav4-lib/1.11.4/odatav4-lib-1.11.4.jar" sourcepath="M2_REPO/com/sap/cloud/servicesdk/prov/odatav4-lib/1.11.4/odatav4-lib-1.11.4-sources.jar">
-    <attributes>
-      <attribute value="jar:file:/C:/Users/AB050979/.m2/repository/com/sap/cloud/servicesdk/prov/odatav4-lib/1.11.4/odatav4-lib-1.11.4-javadoc.jar!/" name="javadoc_location"/>
-    </attributes>
-  </classpathentry>
-  <classpathentry kind="var" path="M2_REPO/com/sap/cloud/servicesdk/prov/odatav4-prov/1.11.4/odatav4-prov-1.11.4.jar" sourcepath="M2_REPO/com/sap/cloud/servicesdk/prov/odatav4-prov/1.11.4/odatav4-prov-1.11.4-sources.jar">
-    <attributes>
-      <attribute value="jar:file:/C:/Users/AB050979/.m2/repository/com/sap/cloud/servicesdk/prov/odatav4-prov/1.11.4/odatav4-prov-1.11.4-javadoc.jar!/" name="javadoc_location"/>
-    </attributes>
-  </classpathentry>
-  <classpathentry kind="var" path="M2_REPO/com/sap/cloud/servicesdk/prov/pojogenerator/1.11.4/pojogenerator-1.11.4.jar" sourcepath="M2_REPO/com/sap/cloud/servicesdk/prov/pojogenerator/1.11.4/pojogenerator-1.11.4-sources.jar">
-    <attributes>
-      <attribute value="jar:file:/C:/Users/AB050979/.m2/repository/com/sap/cloud/servicesdk/prov/pojogenerator/1.11.4/pojogenerator-1.11.4-javadoc.jar!/" name="javadoc_location"/>
-    </attributes>
-  </classpathentry>
-  <classpathentry kind="var" path="M2_REPO/org/mozilla/rhino/1.7R4/rhino-1.7R4.jar" sourcepath="M2_REPO/org/mozilla/rhino/1.7R4/rhino-1.7R4-sources.jar">
-    <attributes>
-      <attribute value="jar:file:/C:/Users/AB050979/.m2/repository/org/mozilla/rhino/1.7R4/rhino-1.7R4-javadoc.jar!/" name="javadoc_location"/>
-    </attributes>
-  </classpathentry>
-  <classpathentry kind="var" path="M2_REPO/io/reactivex/rxjava/1.2.0/rxjava-1.2.0.jar" sourcepath="M2_REPO/io/reactivex/rxjava/1.2.0/rxjava-1.2.0-sources.jar">
-    <attributes>
-      <attribute value="jar:file:/C:/Users/AB050979/.m2/repository/io/reactivex/rxjava/1.2.0/rxjava-1.2.0-javadoc.jar!/" name="javadoc_location"/>
-    </attributes>
-  </classpathentry>
-  <classpathentry kind="var" path="M2_REPO/com/sap/cloud/s4hana/cloudplatform/scp-cf/1.0.0/scp-cf-1.0.0.jar" sourcepath="M2_REPO/com/sap/cloud/s4hana/cloudplatform/scp-cf/1.0.0/scp-cf-1.0.0-sources.jar">
-    <attributes>
-      <attribute value="jar:file:/C:/Users/AB050979/.m2/repository/com/sap/cloud/s4hana/cloudplatform/scp-cf/1.0.0/scp-cf-1.0.0-javadoc.jar!/" name="javadoc_location"/>
-    </attributes>
-  </classpathentry>
-  <classpathentry kind="var" path="M2_REPO/com/sap/cloud/s4hana/cloudplatform/security/1.0.0/security-1.0.0.jar" sourcepath="M2_REPO/com/sap/cloud/s4hana/cloudplatform/security/1.0.0/security-1.0.0-sources.jar">
-    <attributes>
-      <attribute value="jar:file:/C:/Users/AB050979/.m2/repository/com/sap/cloud/s4hana/cloudplatform/security/1.0.0/security-1.0.0-javadoc.jar!/" name="javadoc_location"/>
-    </attributes>
-  </classpathentry>
-  <classpathentry kind="var" path="M2_REPO/com/sap/cloud/s4hana/cloudplatform/security-scp-cf/1.0.0/security-scp-cf-1.0.0.jar" sourcepath="M2_REPO/com/sap/cloud/s4hana/cloudplatform/security-scp-cf/1.0.0/security-scp-cf-1.0.0-sources.jar">
-    <attributes>
-      <attribute value="jar:file:/C:/Users/AB050979/.m2/repository/com/sap/cloud/s4hana/cloudplatform/security-scp-cf/1.0.0/security-scp-cf-1.0.0-javadoc.jar!/" name="javadoc_location"/>
-    </attributes>
-  </classpathentry>
-  <classpathentry kind="var" path="M2_REPO/com/sap/cloud/s4hana/cloudplatform/servlet/1.0.0/servlet-1.0.0.jar" sourcepath="M2_REPO/com/sap/cloud/s4hana/cloudplatform/servlet/1.0.0/servlet-1.0.0-sources.jar">
-    <attributes>
-      <attribute value="jar:file:/C:/Users/AB050979/.m2/repository/com/sap/cloud/s4hana/cloudplatform/servlet/1.0.0/servlet-1.0.0-javadoc.jar!/" name="javadoc_location"/>
-    </attributes>
-  </classpathentry>
-  <classpathentry kind="var" path="M2_REPO/org/slf4j/slf4j-api/1.7.7/slf4j-api-1.7.7.jar" sourcepath="M2_REPO/org/slf4j/slf4j-api/1.7.7/slf4j-api-1.7.7-sources.jar">
-    <attributes>
-      <attribute value="jar:file:/C:/Users/AB050979/.m2/repository/org/slf4j/slf4j-api/1.7.7/slf4j-api-1.7.7-javadoc.jar!/" name="javadoc_location"/>
-    </attributes>
-  </classpathentry>
-  <classpathentry kind="var" path="M2_REPO/org/codehaus/woodstox/stax2-api/3.1.4/stax2-api-3.1.4.jar" sourcepath="M2_REPO/org/codehaus/woodstox/stax2-api/3.1.4/stax2-api-3.1.4-sources.jar">
-    <attributes>
-      <attribute value="jar:file:/C:/Users/AB050979/.m2/repository/org/codehaus/woodstox/stax2-api/3.1.4/stax2-api-3.1.4-javadoc.jar!/" name="javadoc_location"/>
-    </attributes>
-  </classpathentry>
-  <classpathentry kind="var" path="M2_REPO/com/sap/cloud/s4hana/cloudplatform/tenant/1.0.0/tenant-1.0.0.jar" sourcepath="M2_REPO/com/sap/cloud/s4hana/cloudplatform/tenant/1.0.0/tenant-1.0.0-sources.jar">
-    <attributes>
-      <attribute value="jar:file:/C:/Users/AB050979/.m2/repository/com/sap/cloud/s4hana/cloudplatform/tenant/1.0.0/tenant-1.0.0-javadoc.jar!/" name="javadoc_location"/>
-    </attributes>
-  </classpathentry>
-  <classpathentry kind="var" path="M2_REPO/com/sap/cloud/s4hana/cloudplatform/tenant-scp-cf/1.0.0/tenant-scp-cf-1.0.0.jar" sourcepath="M2_REPO/com/sap/cloud/s4hana/cloudplatform/tenant-scp-cf/1.0.0/tenant-scp-cf-1.0.0-sources.jar">
-    <attributes>
-      <attribute value="jar:file:/C:/Users/AB050979/.m2/repository/com/sap/cloud/s4hana/cloudplatform/tenant-scp-cf/1.0.0/tenant-scp-cf-1.0.0-javadoc.jar!/" name="javadoc_location"/>
-    </attributes>
-  </classpathentry>
-  <classpathentry kind="var" path="M2_REPO/com/fasterxml/woodstox/woodstox-core/5.0.3/woodstox-core-5.0.3.jar" sourcepath="M2_REPO/com/fasterxml/woodstox/woodstox-core/5.0.3/woodstox-core-5.0.3-sources.jar">
-    <attributes>
-      <attribute value="jar:file:/C:/Users/AB050979/.m2/repository/com/fasterxml/woodstox/woodstox-core/5.0.3/woodstox-core-5.0.3-javadoc.jar!/" name="javadoc_location"/>
-    </attributes>
-  </classpathentry>
-  <classpathentry kind="var" path="M2_REPO/org/codehaus/woodstox/woodstox-core-asl/4.4.1/woodstox-core-asl-4.4.1.jar" sourcepath="M2_REPO/org/codehaus/woodstox/woodstox-core-asl/4.4.1/woodstox-core-asl-4.4.1-sources.jar">
-    <attributes>
-      <attribute value="jar:file:/C:/Users/AB050979/.m2/repository/org/codehaus/woodstox/woodstox-core-asl/4.4.1/woodstox-core-asl-4.4.1-javadoc.jar!/" name="javadoc_location"/>
-    </attributes>
-  </classpathentry>
-  <classpathentry kind="var" path="M2_REPO/wsdl4j/wsdl4j/1.6.3/wsdl4j-1.6.3.jar" sourcepath="M2_REPO/wsdl4j/wsdl4j/1.6.3/wsdl4j-1.6.3-sources.jar">
-    <attributes>
-      <attribute value="jar:file:/C:/Users/AB050979/.m2/repository/wsdl4j/wsdl4j/1.6.3/wsdl4j-1.6.3-javadoc.jar!/" name="javadoc_location"/>
-    </attributes>
-  </classpathentry>
-  <classpathentry kind="var" path="M2_REPO/xml-resolver/xml-resolver/1.2/xml-resolver-1.2.jar" sourcepath="M2_REPO/xml-resolver/xml-resolver/1.2/xml-resolver-1.2-sources.jar"/>
-  <classpathentry kind="var" path="M2_REPO/org/apache/ws/xmlschema/xmlschema-core/2.2.1/xmlschema-core-2.2.1.jar" sourcepath="M2_REPO/org/apache/ws/xmlschema/xmlschema-core/2.2.1/xmlschema-core-2.2.1-sources.jar">
-    <attributes>
-      <attribute value="jar:file:/C:/Users/AB050979/.m2/repository/org/apache/ws/xmlschema/xmlschema-core/2.2.1/xmlschema-core-2.2.1-javadoc.jar!/" name="javadoc_location"/>
-    </attributes>
-  </classpathentry>
-  <classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry including="**/*.java" kind="src" output="target/test-classes" path="src/test/java"/>
+	<classpathentry including="**/*.java" kind="src" path="src/main/java"/>
+	<classpathentry excluding="**/*.java" kind="src" path="src/main/resources"/>
+	<classpathentry kind="var" path="M2_REPO/javax/servlet/javax.servlet-api/3.1.0/javax.servlet-api-3.1.0.jar" sourcepath="M2_REPO/javax/servlet/javax.servlet-api/3.1.0/javax.servlet-api-3.1.0-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/AB050979/.m2/repository/javax/servlet/javax.servlet-api/3.1.0/javax.servlet-api-3.1.0-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="var" path="M2_REPO/com/fasterxml/aalto-xml/0.9.10/aalto-xml-0.9.10.jar" sourcepath="M2_REPO/com/fasterxml/aalto-xml/0.9.10/aalto-xml-0.9.10-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/AB050979/.m2/repository/com/fasterxml/aalto-xml/0.9.10/aalto-xml-0.9.10-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="var" path="M2_REPO/com/sap/cloud/servicesdk/prov/annotation-processor/1.11.4/annotation-processor-1.11.4.jar" sourcepath="M2_REPO/com/sap/cloud/servicesdk/prov/annotation-processor/1.11.4/annotation-processor-1.11.4-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/AB050979/.m2/repository/com/sap/cloud/servicesdk/prov/annotation-processor/1.11.4/annotation-processor-1.11.4-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="var" path="M2_REPO/org/antlr/antlr4-runtime/4.5.1-1/antlr4-runtime-4.5.1-1.jar" sourcepath="M2_REPO/org/antlr/antlr4-runtime/4.5.1-1/antlr4-runtime-4.5.1-1-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/AB050979/.m2/repository/org/antlr/antlr4-runtime/4.5.1-1/antlr4-runtime-4.5.1-1-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="var" path="M2_REPO/com/sap/cloud/servicesdk/prov/api/1.11.4/api-1.11.4.jar" sourcepath="M2_REPO/com/sap/cloud/servicesdk/prov/api/1.11.4/api-1.11.4-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/AB050979/.m2/repository/com/sap/cloud/servicesdk/prov/api/1.11.4/api-1.11.4-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="var" path="M2_REPO/com/netflix/archaius/archaius-core/0.4.1/archaius-core-0.4.1.jar" sourcepath="M2_REPO/com/netflix/archaius/archaius-core/0.4.1/archaius-core-0.4.1-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/AB050979/.m2/repository/com/netflix/archaius/archaius-core/0.4.1/archaius-core-0.4.1-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="var" path="M2_REPO/asm/asm/3.3.1/asm-3.3.1.jar"/>
+	<classpathentry kind="var" path="M2_REPO/com/sap/cloud/s4hana/cloudplatform/auditlog/1.0.0/auditlog-1.0.0.jar" sourcepath="M2_REPO/com/sap/cloud/s4hana/cloudplatform/auditlog/1.0.0/auditlog-1.0.0-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/AB050979/.m2/repository/com/sap/cloud/s4hana/cloudplatform/auditlog/1.0.0/auditlog-1.0.0-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="var" path="M2_REPO/com/sap/cloud/servicesdk/prov/auditlog/1.11.4/auditlog-1.11.4.jar" sourcepath="M2_REPO/com/sap/cloud/servicesdk/prov/auditlog/1.11.4/auditlog-1.11.4-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/AB050979/.m2/repository/com/sap/cloud/servicesdk/prov/auditlog/1.11.4/auditlog-1.11.4-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="var" path="M2_REPO/com/sap/cloud/s4hana/cloudplatform/auditlog-scp-cf/1.0.0/auditlog-scp-cf-1.0.0.jar" sourcepath="M2_REPO/com/sap/cloud/s4hana/cloudplatform/auditlog-scp-cf/1.0.0/auditlog-scp-cf-1.0.0-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/AB050979/.m2/repository/com/sap/cloud/s4hana/cloudplatform/auditlog-scp-cf/1.0.0/auditlog-scp-cf-1.0.0-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="var" path="M2_REPO/com/sap/cloud/s4hana/cloudplatform/caching/1.0.0/caching-1.0.0.jar" sourcepath="M2_REPO/com/sap/cloud/s4hana/cloudplatform/caching/1.0.0/caching-1.0.0-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/AB050979/.m2/repository/com/sap/cloud/s4hana/cloudplatform/caching/1.0.0/caching-1.0.0-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="var" path="M2_REPO/org/apache/chemistry/opencmis/chemistry-opencmis-client-api/1.1.0/chemistry-opencmis-client-api-1.1.0.jar" sourcepath="M2_REPO/org/apache/chemistry/opencmis/chemistry-opencmis-client-api/1.1.0/chemistry-opencmis-client-api-1.1.0-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/AB050979/.m2/repository/org/apache/chemistry/opencmis/chemistry-opencmis-client-api/1.1.0/chemistry-opencmis-client-api-1.1.0-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="var" path="M2_REPO/org/apache/chemistry/opencmis/chemistry-opencmis-client-bindings/1.1.0/chemistry-opencmis-client-bindings-1.1.0.jar" sourcepath="M2_REPO/org/apache/chemistry/opencmis/chemistry-opencmis-client-bindings/1.1.0/chemistry-opencmis-client-bindings-1.1.0-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/AB050979/.m2/repository/org/apache/chemistry/opencmis/chemistry-opencmis-client-bindings/1.1.0/chemistry-opencmis-client-bindings-1.1.0-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="var" path="M2_REPO/org/apache/chemistry/opencmis/chemistry-opencmis-client-impl/1.1.0/chemistry-opencmis-client-impl-1.1.0.jar" sourcepath="M2_REPO/org/apache/chemistry/opencmis/chemistry-opencmis-client-impl/1.1.0/chemistry-opencmis-client-impl-1.1.0-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/AB050979/.m2/repository/org/apache/chemistry/opencmis/chemistry-opencmis-client-impl/1.1.0/chemistry-opencmis-client-impl-1.1.0-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="var" path="M2_REPO/org/apache/chemistry/opencmis/chemistry-opencmis-commons-api/1.1.0/chemistry-opencmis-commons-api-1.1.0.jar" sourcepath="M2_REPO/org/apache/chemistry/opencmis/chemistry-opencmis-commons-api/1.1.0/chemistry-opencmis-commons-api-1.1.0-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/AB050979/.m2/repository/org/apache/chemistry/opencmis/chemistry-opencmis-commons-api/1.1.0/chemistry-opencmis-commons-api-1.1.0-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="var" path="M2_REPO/org/apache/chemistry/opencmis/chemistry-opencmis-commons-impl/1.1.0/chemistry-opencmis-commons-impl-1.1.0.jar" sourcepath="M2_REPO/org/apache/chemistry/opencmis/chemistry-opencmis-commons-impl/1.1.0/chemistry-opencmis-commons-impl-1.1.0-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/AB050979/.m2/repository/org/apache/chemistry/opencmis/chemistry-opencmis-commons-impl/1.1.0/chemistry-opencmis-commons-impl-1.1.0-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="var" path="M2_REPO/com/sap/cloud/s4hana/quality/common/1.0.0/common-1.0.0.jar" sourcepath="M2_REPO/com/sap/cloud/s4hana/quality/common/1.0.0/common-1.0.0-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/AB050979/.m2/repository/com/sap/cloud/s4hana/quality/common/1.0.0/common-1.0.0-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="var" path="M2_REPO/commons-codec/commons-codec/1.10/commons-codec-1.10.jar" sourcepath="M2_REPO/commons-codec/commons-codec/1.10/commons-codec-1.10-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/AB050979/.m2/repository/commons-codec/commons-codec/1.10/commons-codec-1.10-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="var" path="M2_REPO/commons-configuration/commons-configuration/1.8/commons-configuration-1.8.jar" sourcepath="M2_REPO/commons-configuration/commons-configuration/1.8/commons-configuration-1.8-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/AB050979/.m2/repository/commons-configuration/commons-configuration/1.8/commons-configuration-1.8-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="var" path="M2_REPO/commons-io/commons-io/1.4/commons-io-1.4.jar" sourcepath="M2_REPO/commons-io/commons-io/1.4/commons-io-1.4-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/AB050979/.m2/repository/commons-io/commons-io/1.4/commons-io-1.4-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="var" path="M2_REPO/commons-lang/commons-lang/2.6/commons-lang-2.6.jar" sourcepath="M2_REPO/commons-lang/commons-lang/2.6/commons-lang-2.6-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/AB050979/.m2/repository/commons-lang/commons-lang/2.6/commons-lang-2.6-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="var" path="M2_REPO/org/apache/commons/commons-lang3/3.3.2/commons-lang3-3.3.2.jar" sourcepath="M2_REPO/org/apache/commons/commons-lang3/3.3.2/commons-lang3-3.3.2-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/AB050979/.m2/repository/org/apache/commons/commons-lang3/3.3.2/commons-lang3-3.3.2-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="var" path="M2_REPO/commons-logging/commons-logging/1.1.1/commons-logging-1.1.1.jar" sourcepath="M2_REPO/commons-logging/commons-logging/1.1.1/commons-logging-1.1.1-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/AB050979/.m2/repository/commons-logging/commons-logging/1.1.1/commons-logging-1.1.1-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="var" path="M2_REPO/com/sap/cloud/s4hana/cloudplatform/connectivity/1.0.0/connectivity-1.0.0.jar" sourcepath="M2_REPO/com/sap/cloud/s4hana/cloudplatform/connectivity/1.0.0/connectivity-1.0.0-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/AB050979/.m2/repository/com/sap/cloud/s4hana/cloudplatform/connectivity/1.0.0/connectivity-1.0.0-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="var" path="M2_REPO/com/sap/cloud/s4hana/cloudplatform/connectivity-scp-cf/1.0.0/connectivity-scp-cf-1.0.0.jar" sourcepath="M2_REPO/com/sap/cloud/s4hana/cloudplatform/connectivity-scp-cf/1.0.0/connectivity-scp-cf-1.0.0-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/AB050979/.m2/repository/com/sap/cloud/s4hana/cloudplatform/connectivity-scp-cf/1.0.0/connectivity-scp-cf-1.0.0-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="var" path="M2_REPO/com/sap/cloud/s4hana/core/1.0.0/core-1.0.0.jar" sourcepath="M2_REPO/com/sap/cloud/s4hana/core/1.0.0/core-1.0.0-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/AB050979/.m2/repository/com/sap/cloud/s4hana/core/1.0.0/core-1.0.0-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="var" path="M2_REPO/com/sap/cloud/s4hana/cloudplatform/core/1.0.0/core-1.0.0.jar" sourcepath="M2_REPO/com/sap/cloud/s4hana/cloudplatform/core/1.0.0/core-1.0.0-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/AB050979/.m2/repository/com/sap/cloud/s4hana/cloudplatform/core/1.0.0/core-1.0.0-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="var" path="M2_REPO/com/sap/cloud/s4hana/cloudplatform/core-scp-cf/1.0.0/core-scp-cf-1.0.0.jar" sourcepath="M2_REPO/com/sap/cloud/s4hana/cloudplatform/core-scp-cf/1.0.0/core-scp-cf-1.0.0-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/AB050979/.m2/repository/com/sap/cloud/s4hana/cloudplatform/core-scp-cf/1.0.0/core-scp-cf-1.0.0-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="var" path="M2_REPO/com/sap/cloud/servicesdk/prov/custom-dataprovider/1.11.4/custom-dataprovider-1.11.4.jar" sourcepath="M2_REPO/com/sap/cloud/servicesdk/prov/custom-dataprovider/1.11.4/custom-dataprovider-1.11.4-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/AB050979/.m2/repository/com/sap/cloud/servicesdk/prov/custom-dataprovider/1.11.4/custom-dataprovider-1.11.4-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="var" path="M2_REPO/org/apache/cxf/cxf-core/3.0.12/cxf-core-3.0.12.jar" sourcepath="M2_REPO/org/apache/cxf/cxf-core/3.0.12/cxf-core-3.0.12-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/AB050979/.m2/repository/org/apache/cxf/cxf-core/3.0.12/cxf-core-3.0.12-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="var" path="M2_REPO/org/apache/cxf/cxf-rt-bindings-soap/3.0.12/cxf-rt-bindings-soap-3.0.12.jar" sourcepath="M2_REPO/org/apache/cxf/cxf-rt-bindings-soap/3.0.12/cxf-rt-bindings-soap-3.0.12-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/AB050979/.m2/repository/org/apache/cxf/cxf-rt-bindings-soap/3.0.12/cxf-rt-bindings-soap-3.0.12-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="var" path="M2_REPO/org/apache/cxf/cxf-rt-bindings-xml/3.0.12/cxf-rt-bindings-xml-3.0.12.jar" sourcepath="M2_REPO/org/apache/cxf/cxf-rt-bindings-xml/3.0.12/cxf-rt-bindings-xml-3.0.12-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/AB050979/.m2/repository/org/apache/cxf/cxf-rt-bindings-xml/3.0.12/cxf-rt-bindings-xml-3.0.12-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="var" path="M2_REPO/org/apache/cxf/cxf-rt-databinding-jaxb/3.0.12/cxf-rt-databinding-jaxb-3.0.12.jar" sourcepath="M2_REPO/org/apache/cxf/cxf-rt-databinding-jaxb/3.0.12/cxf-rt-databinding-jaxb-3.0.12-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/AB050979/.m2/repository/org/apache/cxf/cxf-rt-databinding-jaxb/3.0.12/cxf-rt-databinding-jaxb-3.0.12-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="var" path="M2_REPO/org/apache/cxf/cxf-rt-frontend-jaxws/3.0.12/cxf-rt-frontend-jaxws-3.0.12.jar" sourcepath="M2_REPO/org/apache/cxf/cxf-rt-frontend-jaxws/3.0.12/cxf-rt-frontend-jaxws-3.0.12-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/AB050979/.m2/repository/org/apache/cxf/cxf-rt-frontend-jaxws/3.0.12/cxf-rt-frontend-jaxws-3.0.12-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="var" path="M2_REPO/org/apache/cxf/cxf-rt-frontend-simple/3.0.12/cxf-rt-frontend-simple-3.0.12.jar" sourcepath="M2_REPO/org/apache/cxf/cxf-rt-frontend-simple/3.0.12/cxf-rt-frontend-simple-3.0.12-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/AB050979/.m2/repository/org/apache/cxf/cxf-rt-frontend-simple/3.0.12/cxf-rt-frontend-simple-3.0.12-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="var" path="M2_REPO/org/apache/cxf/cxf-rt-transports-http/3.0.12/cxf-rt-transports-http-3.0.12.jar" sourcepath="M2_REPO/org/apache/cxf/cxf-rt-transports-http/3.0.12/cxf-rt-transports-http-3.0.12-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/AB050979/.m2/repository/org/apache/cxf/cxf-rt-transports-http/3.0.12/cxf-rt-transports-http-3.0.12-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="var" path="M2_REPO/org/apache/cxf/cxf-rt-ws-addr/3.0.12/cxf-rt-ws-addr-3.0.12.jar" sourcepath="M2_REPO/org/apache/cxf/cxf-rt-ws-addr/3.0.12/cxf-rt-ws-addr-3.0.12-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/AB050979/.m2/repository/org/apache/cxf/cxf-rt-ws-addr/3.0.12/cxf-rt-ws-addr-3.0.12-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="var" path="M2_REPO/org/apache/cxf/cxf-rt-ws-policy/3.0.12/cxf-rt-ws-policy-3.0.12.jar" sourcepath="M2_REPO/org/apache/cxf/cxf-rt-ws-policy/3.0.12/cxf-rt-ws-policy-3.0.12-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/AB050979/.m2/repository/org/apache/cxf/cxf-rt-ws-policy/3.0.12/cxf-rt-ws-policy-3.0.12-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="var" path="M2_REPO/org/apache/cxf/cxf-rt-wsdl/3.0.12/cxf-rt-wsdl-3.0.12.jar" sourcepath="M2_REPO/org/apache/cxf/cxf-rt-wsdl/3.0.12/cxf-rt-wsdl-3.0.12-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/AB050979/.m2/repository/org/apache/cxf/cxf-rt-wsdl/3.0.12/cxf-rt-wsdl-3.0.12-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="var" path="M2_REPO/com/sap/cloud/servicesdk/developer_license/1.11.4/developer_license-1.11.4.jar" sourcepath="M2_REPO/com/sap/cloud/servicesdk/developer_license/1.11.4/developer_license-1.11.4-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/AB050979/.m2/repository/com/sap/cloud/servicesdk/developer_license/1.11.4/developer_license-1.11.4-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="var" path="M2_REPO/com/sap/cloud/servicesdk/prov/edmxparser/1.11.4/edmxparser-1.11.4.jar" sourcepath="M2_REPO/com/sap/cloud/servicesdk/prov/edmxparser/1.11.4/edmxparser-1.11.4-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/AB050979/.m2/repository/com/sap/cloud/servicesdk/prov/edmxparser/1.11.4/edmxparser-1.11.4-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="var" path="M2_REPO/com/sap/cloud/s4hana/fluent-result/1.0.0/fluent-result-1.0.0.jar" sourcepath="M2_REPO/com/sap/cloud/s4hana/fluent-result/1.0.0/fluent-result-1.0.0-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/AB050979/.m2/repository/com/sap/cloud/s4hana/fluent-result/1.0.0/fluent-result-1.0.0-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="var" path="M2_REPO/com/google/code/gson/gson/2.8.0/gson-2.8.0.jar" sourcepath="M2_REPO/com/google/code/gson/gson/2.8.0/gson-2.8.0-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/AB050979/.m2/repository/com/google/code/gson/gson/2.8.0/gson-2.8.0-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="var" path="M2_REPO/com/google/guava/guava/20.0/guava-20.0.jar" sourcepath="M2_REPO/com/google/guava/guava/20.0/guava-20.0-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/AB050979/.m2/repository/com/google/guava/guava/20.0/guava-20.0-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="var" path="M2_REPO/com/sap/cloud/servicesdk/hana-connectivity-cds/1.11.4/hana-connectivity-cds-1.11.4.jar" sourcepath="M2_REPO/com/sap/cloud/servicesdk/hana-connectivity-cds/1.11.4/hana-connectivity-cds-1.11.4-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/AB050979/.m2/repository/com/sap/cloud/servicesdk/hana-connectivity-cds/1.11.4/hana-connectivity-cds-1.11.4-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="var" path="M2_REPO/com/sap/cloud/servicesdk/hana.connectivity.cds-core/1.11.4/hana.connectivity.cds-core-1.11.4.jar" sourcepath="M2_REPO/com/sap/cloud/servicesdk/hana.connectivity.cds-core/1.11.4/hana.connectivity.cds-core-1.11.4-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/AB050979/.m2/repository/com/sap/cloud/servicesdk/hana.connectivity.cds-core/1.11.4/hana.connectivity.cds-core-1.11.4-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="var" path="M2_REPO/com/github/jknack/handlebars/4.0.6/handlebars-4.0.6.jar" sourcepath="M2_REPO/com/github/jknack/handlebars/4.0.6/handlebars-4.0.6-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/AB050979/.m2/repository/com/github/jknack/handlebars/4.0.6/handlebars-4.0.6-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="var" path="M2_REPO/com/github/jknack/handlebars-helpers/4.0.6/handlebars-helpers-4.0.6.jar" sourcepath="M2_REPO/com/github/jknack/handlebars-helpers/4.0.6/handlebars-helpers-4.0.6-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/AB050979/.m2/repository/com/github/jknack/handlebars-helpers/4.0.6/handlebars-helpers-4.0.6-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="var" path="M2_REPO/com/github/jknack/handlebars-jackson2/1.0.0/handlebars-jackson2-1.0.0.jar" sourcepath="M2_REPO/com/github/jknack/handlebars-jackson2/1.0.0/handlebars-jackson2-1.0.0-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/AB050979/.m2/repository/com/github/jknack/handlebars-jackson2/1.0.0/handlebars-jackson2-1.0.0-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="var" path="M2_REPO/org/hdrhistogram/HdrHistogram/2.1.9/HdrHistogram-2.1.9.jar" sourcepath="M2_REPO/org/hdrhistogram/HdrHistogram/2.1.9/HdrHistogram-2.1.9-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/AB050979/.m2/repository/org/hdrhistogram/HdrHistogram/2.1.9/HdrHistogram-2.1.9-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="var" path="M2_REPO/org/apache/httpcomponents/httpclient/4.5.3/httpclient-4.5.3.jar" sourcepath="M2_REPO/org/apache/httpcomponents/httpclient/4.5.3/httpclient-4.5.3-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/AB050979/.m2/repository/org/apache/httpcomponents/httpclient/4.5.3/httpclient-4.5.3-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="var" path="M2_REPO/org/apache/httpcomponents/httpcore/4.4.6/httpcore-4.4.6.jar" sourcepath="M2_REPO/org/apache/httpcomponents/httpcore/4.4.6/httpcore-4.4.6-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/AB050979/.m2/repository/org/apache/httpcomponents/httpcore/4.4.6/httpcore-4.4.6-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="var" path="M2_REPO/com/sap/cloud/s4hana/frameworks/hystrix/1.0.0/hystrix-1.0.0.jar" sourcepath="M2_REPO/com/sap/cloud/s4hana/frameworks/hystrix/1.0.0/hystrix-1.0.0-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/AB050979/.m2/repository/com/sap/cloud/s4hana/frameworks/hystrix/1.0.0/hystrix-1.0.0-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="var" path="M2_REPO/com/netflix/hystrix/hystrix-core/1.5.9/hystrix-core-1.5.9.jar" sourcepath="M2_REPO/com/netflix/hystrix/hystrix-core/1.5.9/hystrix-core-1.5.9-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/AB050979/.m2/repository/com/netflix/hystrix/hystrix-core/1.5.9/hystrix-core-1.5.9-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="var" path="M2_REPO/com/fasterxml/jackson/core/jackson-annotations/2.8.7/jackson-annotations-2.8.7.jar" sourcepath="M2_REPO/com/fasterxml/jackson/core/jackson-annotations/2.8.7/jackson-annotations-2.8.7-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/AB050979/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.8.7/jackson-annotations-2.8.7-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="var" path="M2_REPO/com/fasterxml/jackson/core/jackson-core/2.8.7/jackson-core-2.8.7.jar" sourcepath="M2_REPO/com/fasterxml/jackson/core/jackson-core/2.8.7/jackson-core-2.8.7-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/AB050979/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.8.7/jackson-core-2.8.7-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="var" path="M2_REPO/com/fasterxml/jackson/core/jackson-databind/2.8.7/jackson-databind-2.8.7.jar" sourcepath="M2_REPO/com/fasterxml/jackson/core/jackson-databind/2.8.7/jackson-databind-2.8.7-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/AB050979/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.8.7/jackson-databind-2.8.7-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="var" path="M2_REPO/com/fasterxml/jackson/dataformat/jackson-dataformat-xml/2.8.7/jackson-dataformat-xml-2.8.7.jar" sourcepath="M2_REPO/com/fasterxml/jackson/dataformat/jackson-dataformat-xml/2.8.7/jackson-dataformat-xml-2.8.7-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/AB050979/.m2/repository/com/fasterxml/jackson/dataformat/jackson-dataformat-xml/2.8.7/jackson-dataformat-xml-2.8.7-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="var" path="M2_REPO/com/fasterxml/jackson/module/jackson-module-jaxb-annotations/2.8.7/jackson-module-jaxb-annotations-2.8.7.jar" sourcepath="M2_REPO/com/fasterxml/jackson/module/jackson-module-jaxb-annotations/2.8.7/jackson-module-jaxb-annotations-2.8.7-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/AB050979/.m2/repository/com/fasterxml/jackson/module/jackson-module-jaxb-annotations/2.8.7/jackson-module-jaxb-annotations-2.8.7-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="var" path="M2_REPO/com/sun/xml/bind/jaxb-core/2.2.11/jaxb-core-2.2.11.jar" sourcepath="M2_REPO/com/sun/xml/bind/jaxb-core/2.2.11/jaxb-core-2.2.11-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/AB050979/.m2/repository/com/sun/xml/bind/jaxb-core/2.2.11/jaxb-core-2.2.11-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="var" path="M2_REPO/com/sun/xml/bind/jaxb-impl/2.2.11/jaxb-impl-2.2.11.jar" sourcepath="M2_REPO/com/sun/xml/bind/jaxb-impl/2.2.11/jaxb-impl-2.2.11-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/AB050979/.m2/repository/com/sun/xml/bind/jaxb-impl/2.2.11/jaxb-impl-2.2.11-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="var" path="M2_REPO/joda-time/joda-time/2.9.7/joda-time-2.9.7.jar" sourcepath="M2_REPO/joda-time/joda-time/2.9.7/joda-time-2.9.7-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/AB050979/.m2/repository/joda-time/joda-time/2.9.7/joda-time-2.9.7-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="var" path="M2_REPO/com/google/code/findbugs/jsr305/3.0.1/jsr305-3.0.1.jar" sourcepath="M2_REPO/com/google/code/findbugs/jsr305/3.0.1/jsr305-3.0.1-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/AB050979/.m2/repository/com/google/code/findbugs/jsr305/3.0.1/jsr305-3.0.1-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="var" path="M2_REPO/org/projectlombok/lombok/1.16.18/lombok-1.16.18.jar" sourcepath="M2_REPO/org/projectlombok/lombok/1.16.18/lombok-1.16.18-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/AB050979/.m2/repository/org/projectlombok/lombok/1.16.18/lombok-1.16.18-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="var" path="M2_REPO/com/sap/cloud/s4hana/cloudplatform/metering/1.0.0/metering-1.0.0.jar" sourcepath="M2_REPO/com/sap/cloud/s4hana/cloudplatform/metering/1.0.0/metering-1.0.0-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/AB050979/.m2/repository/com/sap/cloud/s4hana/cloudplatform/metering/1.0.0/metering-1.0.0-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="var" path="M2_REPO/org/apache/neethi/neethi/3.0.3/neethi-3.0.3.jar" sourcepath="M2_REPO/org/apache/neethi/neethi/3.0.3/neethi-3.0.3-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/AB050979/.m2/repository/org/apache/neethi/neethi/3.0.3/neethi-3.0.3-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="var" path="M2_REPO/com/sap/cloud/servicesdk/odata-v2-lib/1.11.4/odata-v2-lib-1.11.4.jar" sourcepath="M2_REPO/com/sap/cloud/servicesdk/odata-v2-lib/1.11.4/odata-v2-lib-1.11.4-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/AB050979/.m2/repository/com/sap/cloud/servicesdk/odata-v2-lib/1.11.4/odata-v2-lib-1.11.4-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="var" path="M2_REPO/com/sap/cloud/servicesdk/prov/odata4.api/1.11.4/odata4.api-1.11.4.jar" sourcepath="M2_REPO/com/sap/cloud/servicesdk/prov/odata4.api/1.11.4/odata4.api-1.11.4-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/AB050979/.m2/repository/com/sap/cloud/servicesdk/prov/odata4.api/1.11.4/odata4.api-1.11.4-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="var" path="M2_REPO/com/sap/cloud/servicesdk/prov/odata4.cds/1.11.4/odata4.cds-1.11.4.jar" sourcepath="M2_REPO/com/sap/cloud/servicesdk/prov/odata4.cds/1.11.4/odata4.cds-1.11.4-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/AB050979/.m2/repository/com/sap/cloud/servicesdk/prov/odata4.cds/1.11.4/odata4.cds-1.11.4-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="var" path="M2_REPO/com/sap/cloud/servicesdk/prov/odata4.cdx/1.11.4/odata4.cdx-1.11.4.jar" sourcepath="M2_REPO/com/sap/cloud/servicesdk/prov/odata4.cdx/1.11.4/odata4.cdx-1.11.4-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/AB050979/.m2/repository/com/sap/cloud/servicesdk/prov/odata4.cdx/1.11.4/odata4.cdx-1.11.4-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="var" path="M2_REPO/com/sap/cloud/servicesdk/prov/odata4.core/1.11.4/odata4.core-1.11.4.jar" sourcepath="M2_REPO/com/sap/cloud/servicesdk/prov/odata4.core/1.11.4/odata4.core-1.11.4-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/AB050979/.m2/repository/com/sap/cloud/servicesdk/prov/odata4.core/1.11.4/odata4.core-1.11.4-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="var" path="M2_REPO/com/sap/cloud/servicesdk/prov/odata4.jdbc/1.11.4/odata4.jdbc-1.11.4.jar" sourcepath="M2_REPO/com/sap/cloud/servicesdk/prov/odata4.jdbc/1.11.4/odata4.jdbc-1.11.4-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/AB050979/.m2/repository/com/sap/cloud/servicesdk/prov/odata4.jdbc/1.11.4/odata4.jdbc-1.11.4-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="var" path="M2_REPO/com/sap/cloud/servicesdk/prov/odata4.web/1.11.4/odata4.web-1.11.4.jar" sourcepath="M2_REPO/com/sap/cloud/servicesdk/prov/odata4.web/1.11.4/odata4.web-1.11.4-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/AB050979/.m2/repository/com/sap/cloud/servicesdk/prov/odata4.web/1.11.4/odata4.web-1.11.4-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="var" path="M2_REPO/com/sap/cloud/servicesdk/prov/odata4.xsa/1.11.4/odata4.xsa-1.11.4.jar" sourcepath="M2_REPO/com/sap/cloud/servicesdk/prov/odata4.xsa/1.11.4/odata4.xsa-1.11.4-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/AB050979/.m2/repository/com/sap/cloud/servicesdk/prov/odata4.xsa/1.11.4/odata4.xsa-1.11.4-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="var" path="M2_REPO/com/sap/cloud/servicesdk/odatav2-connectivity/1.11.4/odatav2-connectivity-1.11.4.jar" sourcepath="M2_REPO/com/sap/cloud/servicesdk/odatav2-connectivity/1.11.4/odatav2-connectivity-1.11.4-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/AB050979/.m2/repository/com/sap/cloud/servicesdk/odatav2-connectivity/1.11.4/odatav2-connectivity-1.11.4-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="var" path="M2_REPO/com/sap/cloud/servicesdk/prov/odatav4-lib/1.11.4/odatav4-lib-1.11.4.jar" sourcepath="M2_REPO/com/sap/cloud/servicesdk/prov/odatav4-lib/1.11.4/odatav4-lib-1.11.4-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/AB050979/.m2/repository/com/sap/cloud/servicesdk/prov/odatav4-lib/1.11.4/odatav4-lib-1.11.4-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="var" path="M2_REPO/com/sap/cloud/servicesdk/prov/odatav4-prov/1.11.4/odatav4-prov-1.11.4.jar" sourcepath="M2_REPO/com/sap/cloud/servicesdk/prov/odatav4-prov/1.11.4/odatav4-prov-1.11.4-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/AB050979/.m2/repository/com/sap/cloud/servicesdk/prov/odatav4-prov/1.11.4/odatav4-prov-1.11.4-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="var" path="M2_REPO/com/sap/cloud/servicesdk/prov/pojogenerator/1.11.4/pojogenerator-1.11.4.jar" sourcepath="M2_REPO/com/sap/cloud/servicesdk/prov/pojogenerator/1.11.4/pojogenerator-1.11.4-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/AB050979/.m2/repository/com/sap/cloud/servicesdk/prov/pojogenerator/1.11.4/pojogenerator-1.11.4-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="var" path="M2_REPO/org/mozilla/rhino/1.7R4/rhino-1.7R4.jar" sourcepath="M2_REPO/org/mozilla/rhino/1.7R4/rhino-1.7R4-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/AB050979/.m2/repository/org/mozilla/rhino/1.7R4/rhino-1.7R4-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="var" path="M2_REPO/io/reactivex/rxjava/1.2.0/rxjava-1.2.0.jar" sourcepath="M2_REPO/io/reactivex/rxjava/1.2.0/rxjava-1.2.0-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/AB050979/.m2/repository/io/reactivex/rxjava/1.2.0/rxjava-1.2.0-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="var" path="M2_REPO/com/sap/cloud/s4hana/cloudplatform/scp-cf/1.0.0/scp-cf-1.0.0.jar" sourcepath="M2_REPO/com/sap/cloud/s4hana/cloudplatform/scp-cf/1.0.0/scp-cf-1.0.0-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/AB050979/.m2/repository/com/sap/cloud/s4hana/cloudplatform/scp-cf/1.0.0/scp-cf-1.0.0-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="var" path="M2_REPO/com/sap/cloud/s4hana/cloudplatform/security/1.0.0/security-1.0.0.jar" sourcepath="M2_REPO/com/sap/cloud/s4hana/cloudplatform/security/1.0.0/security-1.0.0-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/AB050979/.m2/repository/com/sap/cloud/s4hana/cloudplatform/security/1.0.0/security-1.0.0-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="var" path="M2_REPO/com/sap/cloud/s4hana/cloudplatform/security-scp-cf/1.0.0/security-scp-cf-1.0.0.jar" sourcepath="M2_REPO/com/sap/cloud/s4hana/cloudplatform/security-scp-cf/1.0.0/security-scp-cf-1.0.0-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/AB050979/.m2/repository/com/sap/cloud/s4hana/cloudplatform/security-scp-cf/1.0.0/security-scp-cf-1.0.0-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="var" path="M2_REPO/com/sap/cloud/s4hana/cloudplatform/servlet/1.0.0/servlet-1.0.0.jar" sourcepath="M2_REPO/com/sap/cloud/s4hana/cloudplatform/servlet/1.0.0/servlet-1.0.0-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/AB050979/.m2/repository/com/sap/cloud/s4hana/cloudplatform/servlet/1.0.0/servlet-1.0.0-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="var" path="M2_REPO/org/slf4j/slf4j-api/1.7.7/slf4j-api-1.7.7.jar" sourcepath="M2_REPO/org/slf4j/slf4j-api/1.7.7/slf4j-api-1.7.7-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/AB050979/.m2/repository/org/slf4j/slf4j-api/1.7.7/slf4j-api-1.7.7-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="var" path="M2_REPO/org/codehaus/woodstox/stax2-api/3.1.4/stax2-api-3.1.4.jar" sourcepath="M2_REPO/org/codehaus/woodstox/stax2-api/3.1.4/stax2-api-3.1.4-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/AB050979/.m2/repository/org/codehaus/woodstox/stax2-api/3.1.4/stax2-api-3.1.4-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="var" path="M2_REPO/com/sap/cloud/s4hana/cloudplatform/tenant/1.0.0/tenant-1.0.0.jar" sourcepath="M2_REPO/com/sap/cloud/s4hana/cloudplatform/tenant/1.0.0/tenant-1.0.0-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/AB050979/.m2/repository/com/sap/cloud/s4hana/cloudplatform/tenant/1.0.0/tenant-1.0.0-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="var" path="M2_REPO/com/sap/cloud/s4hana/cloudplatform/tenant-scp-cf/1.0.0/tenant-scp-cf-1.0.0.jar" sourcepath="M2_REPO/com/sap/cloud/s4hana/cloudplatform/tenant-scp-cf/1.0.0/tenant-scp-cf-1.0.0-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/AB050979/.m2/repository/com/sap/cloud/s4hana/cloudplatform/tenant-scp-cf/1.0.0/tenant-scp-cf-1.0.0-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="var" path="M2_REPO/com/fasterxml/woodstox/woodstox-core/5.0.3/woodstox-core-5.0.3.jar" sourcepath="M2_REPO/com/fasterxml/woodstox/woodstox-core/5.0.3/woodstox-core-5.0.3-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/AB050979/.m2/repository/com/fasterxml/woodstox/woodstox-core/5.0.3/woodstox-core-5.0.3-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="var" path="M2_REPO/org/codehaus/woodstox/woodstox-core-asl/4.4.1/woodstox-core-asl-4.4.1.jar" sourcepath="M2_REPO/org/codehaus/woodstox/woodstox-core-asl/4.4.1/woodstox-core-asl-4.4.1-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/AB050979/.m2/repository/org/codehaus/woodstox/woodstox-core-asl/4.4.1/woodstox-core-asl-4.4.1-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="var" path="M2_REPO/wsdl4j/wsdl4j/1.6.3/wsdl4j-1.6.3.jar" sourcepath="M2_REPO/wsdl4j/wsdl4j/1.6.3/wsdl4j-1.6.3-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/AB050979/.m2/repository/wsdl4j/wsdl4j/1.6.3/wsdl4j-1.6.3-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="var" path="M2_REPO/xml-resolver/xml-resolver/1.2/xml-resolver-1.2.jar" sourcepath="M2_REPO/xml-resolver/xml-resolver/1.2/xml-resolver-1.2-sources.jar"/>
+	<classpathentry kind="var" path="M2_REPO/org/apache/ws/xmlschema/xmlschema-core/2.2.1/xmlschema-core-2.2.1.jar" sourcepath="M2_REPO/org/apache/ws/xmlschema/xmlschema-core/2.2.1/xmlschema-core-2.2.1-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/AB050979/.m2/repository/org/apache/ws/xmlschema/xmlschema-core/2.2.1/xmlschema-core-2.2.1-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path=".apt_generated">
+		<attributes>
+			<attribute name="optional" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="output" path="target/classes"/>
 </classpath>
