@@ -105,7 +105,7 @@ public class Servlet extends HttpServlet  {
 		
 		try {
 			if(req.getParameter("root") != null) {
-				DocumentServiceAdapter.displayFolderStructureOfRoot(res);
+				DocumentServiceAdapter.displayFolderStructure(res);
 			}
 			if(req.getParameter("nFolder") != null) {
 				DocumentServiceAdapter.createFolder(res, req.getParameter("nFolder"));

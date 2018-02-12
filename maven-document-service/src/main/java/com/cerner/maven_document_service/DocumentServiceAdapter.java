@@ -1,8 +1,10 @@
 package com.cerner.maven_document_service;
 
+import java.io.BufferedReader;
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
@@ -44,14 +46,14 @@ public class DocumentServiceAdapter {
 			response.getWriter().println("ECM not found, the session is null");
 			return;
 		}
-		
-		response.getWriter().printf("<h3>Create of %s folder</h3>",  folderName);
-		
+
+		response.getWriter().printf("<h3>Create of %s folder</h3>", folderName);
+
 		// access the root folder of the repository
 		Folder root = session.getRootFolder();
-		
-//		int beginIndex = folderPath.lastIndexOf("/");
-//		String folderName = folderPath.substring(beginIndex, folderPath.length());
+
+		// int beginIndex = folderPath.lastIndexOf("/");
+		// String folderName = folderPath.substring(beginIndex, folderPath.length());
 
 		// create a new folder
 		Map<String, String> newFolderProps = new HashMap<String, String>();
@@ -67,7 +69,7 @@ public class DocumentServiceAdapter {
 					e.getMessage());
 		}
 	}
-	
+
 	public static void filter(HttpServletResponse response, String filter) throws IOException {
 		Session session = getCmisSession(response);
 
@@ -75,23 +77,24 @@ public class DocumentServiceAdapter {
 			response.getWriter().println("ECM not found, the session is null");
 			return;
 		}
-		
+
 		// access the root folder of the repository
 		Folder root = session.getRootFolder();
-		
+
 		try {
 			ItemIterable<QueryResult> query = session.query(filter, true);
-			
+
 			response.getWriter().printf("Total results: %d", query.getTotalNumItems());
-			
+
 			Iterator<QueryResult> it = query.iterator();
-			
+
 		} catch (Exception e) {
 			// TODO: handle exception
 		}
 	}
 
-	public static void createDocument(HttpServletResponse response, String documentNameWithExtension) throws IOException {
+	public static void createDocument(HttpServletResponse response, String documentNameWithExtension)
+			throws IOException {
 
 		Session session = getCmisSession(response);
 
@@ -99,29 +102,28 @@ public class DocumentServiceAdapter {
 			response.getWriter().println("ECM not found, the session is null");
 			return;
 		}
-		
+
 		response.getWriter().println("<h3 style='color:blue'>createDocument</h3>");
 
 		// access the root folder of the repository
 		Folder root = session.getRootFolder();
 
 		// create a new file in the root folder
-	      Map<String, Object> properties = new HashMap<String, Object>();
-	      properties.put(PropertyIds.OBJECT_TYPE_ID, "cmis:document");
-	      properties.put(PropertyIds.NAME, documentNameWithExtension);
-	      byte[] helloContent = "Hello World!".getBytes("UTF-8");
-	      InputStream stream = new ByteArrayInputStream(helloContent);
-	      ContentStream contentStream = session.getObjectFactory()
-	                                    .createContentStream(documentNameWithExtension,
-	                                    helloContent.length, "text/plain; charset=UTF-8", stream);
-	      try {
-	        root.createDocument(properties, contentStream, VersioningState.NONE);
-	      } catch (CmisNameConstraintViolationException e) {
-	        // Document exists already, nothing to do
-	      }
-		
+		Map<String, Object> properties = new HashMap<String, Object>();
+		properties.put(PropertyIds.OBJECT_TYPE_ID, "cmis:document");
+		properties.put(PropertyIds.NAME, documentNameWithExtension);
+		byte[] helloContent = "Hello World!".getBytes("UTF-8");
+		InputStream stream = new ByteArrayInputStream(helloContent);
+		ContentStream contentStream = session.getObjectFactory().createContentStream(documentNameWithExtension,
+				helloContent.length, "text/plain; charset=UTF-8", stream);
+		try {
+			root.createDocument(properties, contentStream, VersioningState.NONE);
+		} catch (CmisNameConstraintViolationException e) {
+			// Document exists already, nothing to do
+		}
+
 	}
-	
+
 	public static void createDocumentAsBytes(HttpServletResponse response, String filename) throws IOException {
 		// https://chemistry.apache.org/docs/cmis-samples/samples/content/index.html
 		Session session = getCmisSession(response);
@@ -130,25 +132,26 @@ public class DocumentServiceAdapter {
 			response.getWriter().println("ECM not found, the session is null");
 			return;
 		}
-		
+
 		response.getWriter().println("<h3 style='color:blue'>createDocumentAsBytes</h3>");
 
 		// access the root folder of the repository
 		Folder root = session.getRootFolder();
 
 		// create a new file in the root folder
-	      Map<String, Object> properties = new HashMap<String, Object>();
-	      properties.put(PropertyIds.OBJECT_TYPE_ID, "cmis:document");
-	      properties.put(PropertyIds.NAME, filename);
-	      byte[] bytes = "Hello World!".getBytes("UTF-8");
-	      ContentStream cs2 = ContentStreamUtils.createByteArrayContentStream(filename, bytes, MimeTypes.getMIMEType("txt"));
-	      try {
-	        root.createDocument(properties, cs2, VersioningState.NONE);
-	      } catch (CmisNameConstraintViolationException e) {
-	        e.printStackTrace(response.getWriter());
-	      }
+		Map<String, Object> properties = new HashMap<String, Object>();
+		properties.put(PropertyIds.OBJECT_TYPE_ID, "cmis:document");
+		properties.put(PropertyIds.NAME, filename);
+		byte[] bytes = "Hello World!".getBytes("UTF-8");
+		ContentStream cs2 = ContentStreamUtils.createByteArrayContentStream(filename, bytes,
+				MimeTypes.getMIMEType("txt"));
+		try {
+			root.createDocument(properties, cs2, VersioningState.NONE);
+		} catch (CmisNameConstraintViolationException e) {
+			e.printStackTrace(response.getWriter());
+		}
 	}
-	
+
 	public static void getObjectByPath(HttpServletResponse response, String path) throws IOException {
 		Session session = getCmisSession(response);
 
@@ -156,60 +159,44 @@ public class DocumentServiceAdapter {
 			response.getWriter().println("ECM not found, the session is null");
 			return;
 		}
-		
+
 		CmisObject cmisObject = session.getObjectByPath(path);
-		
+
 		if (cmisObject instanceof Document) {
-		    Document document = (Document) cmisObject;
-		    ContentStream contentStream = document.getContentStream();
-		    InputStream stream = contentStream.getStream();
-		    response.getWriter().printf("Content: %s", stream);
+			Document document = (Document) cmisObject;
+			ContentStream contentStream = document.getContentStream();
+			InputStream stream = contentStream.getStream();
+			
+			response.getWriter().println("Properties <br>");
+			//Displaying the properties of an Object
+			List<org.apache.chemistry.opencmis.client.api.Property<?>> props = document.getProperties();
+			for (org.apache.chemistry.opencmis.client.api.Property<?> p : props) {
+				response.getWriter().println(p.getDefinition().getDisplayName() + "=" + p.getValuesAsString() + "<br>");
+			}
+			
+			response.getWriter().printf("content: %s", 
+					getStringFromInputStream(response, stream));
 		} else if (cmisObject instanceof Folder) {
 			// it's a folder
-		    Folder folder = (Folder) cmisObject;
-		    displayFolderStructure(response, folder);
+			Folder folder = (Folder) cmisObject;
+			displayFolderStructure(response, folder);
 		} else {
 			response.getWriter().println("Unknown or not exist object");
 		}
 	}
-	
-	public static void displayFolderStructureOfRoot(HttpServletResponse res) throws IOException {
-		
-		res.getWriter().println("<h3 style='color:blue'>displayFolderStructureOfRoot</h3>");
 
+	public static void displayFolderStructure(HttpServletResponse res) throws IOException {
 		Session session = getCmisSession(res);
 
 		if (session == null) {
 			res.getWriter().println("ECM not found, the session is null");
 			return;
 		}
-		
-		res.getWriter().println("<h3>Display of root folder structure</h3>");
 
-		// access the root folder of the repository
-		Folder root = session.getRootFolder();
-		
-
-		// Display the root folder's children objects
-		ItemIterable<CmisObject> children = root.getChildren();
-		res.getWriter().println(
-				"The root folder of the repository with id " + root.getId() + " contains the following objects:<ul>");
-		for (CmisObject o : children) {
-			res.getWriter().print("<li>" + o.getName());
-			if (o instanceof Folder) {
-				res.getWriter().println(" createdBy: " + o.getCreatedBy() + "</li>");
-			} else {
-				Document doc = (Document) o;
-				res.getWriter().println(" createdBy: " + o.getCreatedBy() + " filesize: "
-						+ doc.getContentStreamLength() + " bytes" + "</li>");
-			}
-		}
-		res.getWriter().println("</ul>");
-		
+		displayFolderStructure(res, session.getRootFolder());
 	}
-	
-	public static void displayFolderStructure(HttpServletResponse res, Folder folder) throws IOException {
 
+	public static void displayFolderStructure(HttpServletResponse res, Folder folder) throws IOException {
 		Session session = getCmisSession(res);
 
 		if (session == null) {
@@ -219,8 +206,8 @@ public class DocumentServiceAdapter {
 			res.getWriter().println("Folder path does not exist");
 			return;
 		}
-		
-		res.getWriter().printf("<h3>Display of %s folder path structure</h3>",  folder.getPath());
+
+		res.getWriter().printf("<h3>Display of %s folder path structure</h3>", folder.getPath());
 
 		// Display the root folder's children objects
 		ItemIterable<CmisObject> children = folder.getChildren();
@@ -232,54 +219,21 @@ public class DocumentServiceAdapter {
 				res.getWriter().println(" createdBy: " + o.getCreatedBy() + "</li>");
 			} else {
 				Document doc = (Document) o;
-				res.getWriter().println(" createdBy: " + o.getCreatedBy() + " filesize: "
-						+ doc.getContentStreamLength() + " bytes" + "</li>");
+				res.getWriter().println(" createdBy: " + o.getCreatedBy() + " filesize: " + doc.getContentStreamLength()
+						+ " bytes" + "</li>");
 			}
 		}
 		res.getWriter().println("</ul>");
-		
-	}
-	
-	/**
-	 * 
-	 * @param res
-	 * The HttpServletResponse so we can interact with the frontend
-	 * @param folderPath
-	 * The folder path + the folder name eg: /folderName
-	 * @return
-	 * returns null of there was no folder found
-	 * @throws IOException
-	 */
-	private static Folder getFolderByName(HttpServletResponse res, String folderPath) throws IOException {
-		
-		Session session = getCmisSession(res);
-		
-		Folder folder = null;
 
-		if (session == null) {
-			res.getWriter().println("ECM not found, the session is null");
-			return folder;
-		}
-		
-		try {
-			session.getObjectByPath(folderPath);
-			folder = (Folder) session.getObjectByPath(folderPath);
-		} catch (CmisObjectNotFoundException e) {
-			// TODO: handle exception
-			res.getWriter().printf("Folder path %s was not found", folderPath);
-		}
-		
-		return folder;
 	}
 
-	
 	public static Session getCmisSession(HttpServletResponse response) throws IOException {
 		if (response == null)
 			return cmisSession = null;
 		if (cmisSession == null) {
-			
+
 			response.getWriter().println("<h3 style='color:blue'>getCmisSession</h3>");
-			
+
 			try {
 				// default factory implementation
 				SessionFactory factory = SessionFactoryImpl.newInstance();
@@ -296,9 +250,10 @@ public class DocumentServiceAdapter {
 
 				// create session
 				cmisSession = factory.createSession(parameters);
-				
+
 			} catch (Exception e) {
-				response.getWriter().println("<div style='color:red'>There was an error in retrieving the CMIS Session</div>");
+				response.getWriter()
+						.println("<div style='color:red'>There was an error in retrieving the CMIS Session</div>");
 				// TODO: handle exception
 				response.getWriter().println(e.getMessage());
 				e.printStackTrace(response.getWriter());
@@ -307,5 +262,35 @@ public class DocumentServiceAdapter {
 
 		return cmisSession;
 	}
-	
+
+	// convert InputStream to String
+	private static String getStringFromInputStream(HttpServletResponse response, InputStream is) throws IOException {
+
+		BufferedReader br = null;
+		StringBuilder sb = new StringBuilder();
+
+		String line;
+		try {
+
+			br = new BufferedReader(new InputStreamReader(is));
+			while ((line = br.readLine()) != null) {
+				sb.append(line);
+			}
+
+		} catch (IOException e) {
+			e.printStackTrace(response.getWriter());
+		} finally {
+			if (br != null) {
+				try {
+					br.close();
+				} catch (IOException e) {
+					e.printStackTrace(response.getWriter());
+				}
+			}
+		}
+
+		return sb.toString();
+
+	}
+
 }
