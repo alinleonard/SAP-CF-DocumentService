@@ -142,9 +142,12 @@ public class DocumentServiceAdapter {
 		Map<String, Object> properties = new HashMap<String, Object>();
 		properties.put(PropertyIds.OBJECT_TYPE_ID, "cmis:document");
 		properties.put(PropertyIds.NAME, filename);
-		byte[] bytes = "Hello World!".getBytes("UTF-8");
+		byte[] bytes = "Hello World! octet stream".getBytes();
+		//ContentStream cs2 = ContentStreamUtils.createByteArrayContentStream(filename, bytes,
+			//	MimeTypes.getMIMEType("txt"));
 		ContentStream cs2 = ContentStreamUtils.createByteArrayContentStream(filename, bytes,
-				MimeTypes.getMIMEType("txt"));
+				MimeTypes.getMIMEType("application/octet-stream"));
+		
 		try {
 			root.createDocument(properties, cs2, VersioningState.NONE);
 		} catch (CmisNameConstraintViolationException e) {
@@ -174,8 +177,10 @@ public class DocumentServiceAdapter {
 				response.getWriter().println(p.getDefinition().getDisplayName() + "=" + p.getValuesAsString() + "<br>");
 			}
 			
-			response.getWriter().printf("content: %s", 
+			response.getWriter().printf("Content: %s", 
 					getStringFromInputStream(response, stream));
+			
+			response.getWriter().println("<br>ContentURL: " + document.getContentUrl());
 		} else if (cmisObject instanceof Folder) {
 			// it's a folder
 			Folder folder = (Folder) cmisObject;
