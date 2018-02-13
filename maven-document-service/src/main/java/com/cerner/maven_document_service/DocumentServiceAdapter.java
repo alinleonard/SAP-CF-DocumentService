@@ -131,7 +131,7 @@ public class DocumentServiceAdapter {
 		}
 
 	}
-	
+
 	public static void createDocument(HttpServletResponse response, String documentNameWithExtension, String createdBy)
 			throws IOException {
 
@@ -141,6 +141,9 @@ public class DocumentServiceAdapter {
 			response.getWriter().println("ECM not found, the session is null");
 			return;
 		}
+		
+		OperationContext oc3 = OperationContextUtils.createMaximumOperationContext();
+		session.setDefaultContext(oc3);
 
 		response.getWriter().println("<h3 style='color:blue'>createDocument</h3>");
 
@@ -152,13 +155,16 @@ public class DocumentServiceAdapter {
 		properties.put(PropertyIds.OBJECT_TYPE_ID, "cmis:document");
 		properties.put(PropertyIds.NAME, documentNameWithExtension);
 		properties.put(PropertyIds.CREATED_BY, createdBy);
-		
+		// custom meta data
+		properties.put("project:string", "red");
+		properties.put("project:number", 1234);
+
 		try {
 			root.createDocument(properties, null, VersioningState.NONE);
 		} catch (Exception e) {
 			// Document exists already, nothing to do
 			e.printStackTrace(response.getWriter());
-		} 
+		}
 
 	}
 
@@ -181,11 +187,12 @@ public class DocumentServiceAdapter {
 		properties.put(PropertyIds.OBJECT_TYPE_ID, "cmis:document");
 		properties.put(PropertyIds.NAME, filename);
 		byte[] bytes = "Hello World! octet stream".getBytes();
-		//ContentStream cs2 = ContentStreamUtils.createByteArrayContentStream(filename, bytes,
-			//	MimeTypes.getMIMEType("txt"));
+		// ContentStream cs2 = ContentStreamUtils.createByteArrayContentStream(filename,
+		// bytes,
+		// MimeTypes.getMIMEType("txt"));
 		ContentStream cs2 = ContentStreamUtils.createByteArrayContentStream(filename, bytes,
 				MimeTypes.getMIMEType("application/octet-stream"));
-		
+
 		try {
 			root.createDocument(properties, cs2, VersioningState.NONE);
 		} catch (CmisNameConstraintViolationException e) {
@@ -207,17 +214,16 @@ public class DocumentServiceAdapter {
 			Document document = (Document) cmisObject;
 			ContentStream contentStream = document.getContentStream();
 			InputStream stream = contentStream.getStream();
-			
+
 			response.getWriter().println("Properties <br>");
-			//Displaying the properties of an Object
+			// Displaying the properties of an Object
 			List<org.apache.chemistry.opencmis.client.api.Property<?>> props = document.getProperties();
 			for (org.apache.chemistry.opencmis.client.api.Property<?> p : props) {
 				response.getWriter().println(p.getDefinition().getDisplayName() + "=" + p.getValuesAsString() + "<br>");
 			}
-		
-			response.getWriter().printf("Content: %s", 
-					getStringFromInputStream(response, stream));
-			
+
+			response.getWriter().printf("Content: %s", getStringFromInputStream(response, stream));
+
 			response.getWriter().println("<br>ContentURL: " + document.getContentUrl());
 		} else if (cmisObject instanceof Folder) {
 			// it's a folder
@@ -227,7 +233,7 @@ public class DocumentServiceAdapter {
 			response.getWriter().println("Unknown or not exist object");
 		}
 	}
-	
+
 	private static Document getDocumentByPath(HttpServletResponse response, String path) throws IOException {
 		Session session = getCmisSession(response);
 
@@ -235,9 +241,8 @@ public class DocumentServiceAdapter {
 			response.getWriter().println("ECM not found, the session is null");
 			return null;
 		}
-		
-		OperationContext oc3 = OperationContextUtils.createMaximumOperationContext();
-		CmisObject cmisObject = session.getObjectByPath(path, oc3);
+
+		CmisObject cmisObject = session.getObjectByPath(path);
 
 		if (cmisObject instanceof Document) {
 			Document document = (Document) cmisObject;
@@ -290,7 +295,7 @@ public class DocumentServiceAdapter {
 		res.getWriter().println("</ul>");
 
 	}
-	
+
 	public static void setACLdummy(HttpServletResponse res) throws IOException {
 		Session session = getCmisSession(res);
 
@@ -298,68 +303,55 @@ public class DocumentServiceAdapter {
 			res.getWriter().println("ECM not found, the session is null");
 			return;
 		}
-		
+
 		String userIdOfUser1 = "user_1";
-    	String userIdOfUser2 = "user_2";
+		String userIdOfUser2 = "user_2";
 
-    	// list of ACEs which should be added
-    	List<Ace> addAcl = new ArrayList<Ace>();
+		// list of ACEs which should be added
+		List<Ace> addAcl = new ArrayList<Ace>();
 
-    	// build and add ACE for user U1
-    	List<String> permissionsUser1 = new ArrayList<String>();
-    		permissionsUser1.add("cmis:all");
-    	Ace aceUser1 = session.getObjectFactory().createAce(userIdOfUser1, 
-    	    	permissionsUser1);
-    	addAcl.add(aceUser1);
+		// build and add ACE for user U1
+		List<String> permissionsUser1 = new ArrayList<String>();
+		permissionsUser1.add("cmis:all");
+		Ace aceUser1 = session.getObjectFactory().createAce(userIdOfUser1, permissionsUser1);
+		addAcl.add(aceUser1);
 
-    	// build and add ACE for user U2
-    	List<String> permissionsUser2 = new ArrayList<String>();
-    		permissionsUser2.add("cmis:read");
-    	Ace aceUser2 = session.getObjectFactory().createAce(userIdOfUser2, 
-    		permissionsUser1);
-    	addAcl.add(aceUser2);
+		// build and add ACE for user U2
+		List<String> permissionsUser2 = new ArrayList<String>();
+		permissionsUser2.add("cmis:read");
+		Ace aceUser2 = session.getObjectFactory().createAce(userIdOfUser2, permissionsUser1);
+		addAcl.add(aceUser2);
 
-    	// list of ACEs which should be removed
-    	List<Ace> removeAcl = new ArrayList<Ace>();
+		// list of ACEs which should be removed
+		List<Ace> removeAcl = new ArrayList<Ace>();
 
-    	// build and add ACE for user {sap:builtin}everyone
-    	List<String> permissionsEveryone = new ArrayList<String>();
-    		permissionsEveryone.add("cmis:all");
-    	Ace aceEveryone = session.getObjectFactory().createAce(
-    	    	"{sap:builtin}everyone", permissionsEveryone);
-    	removeAcl.add(aceEveryone);
-    
-    	// add and remove the ACEs at the folder
-    	//folder.applyAcl(addAcl, removeAcl, AclPropagation.OBJECTONLY);
-   		Document document = getDocumentByPath(res, "/file1");
-   		document.applyAcl(addAcl, removeAcl, AclPropagation.OBJECTONLY);
-   		
-   		createDocument(res, "acldocument_test_2.txt", "acl_user_1");
-   		
-   		addAcl = new ArrayList<Ace>();
+		// build and add ACE for user {sap:builtin}everyone
+		List<String> permissionsEveryone = new ArrayList<String>();
+		permissionsEveryone.add("cmis:all");
+		Ace aceEveryone = session.getObjectFactory().createAce("{sap:builtin}everyone", permissionsEveryone);
+		removeAcl.add(aceEveryone);
 
-    	// build and add ACE for user U1
-    	permissionsUser1 = new ArrayList<String>();
-    	permissionsUser1.add("cmis:all");
-    	Ace aceACLUser1 = session.getObjectFactory().createAce("acl_user_1", 
-    	    	permissionsUser1);
-    	addAcl.add(aceACLUser1);
-    	
-    	Document document_new = getDocumentByPath(res, "/acldocument_test_2.txt");
-    	
-    	Map<String, Object> properties = new HashMap<String, Object>();
-		properties.put("project:string", "red");
-		properties.put("project:number", 1234);
-		// create an operation context that selects everything
-		try {
-    	document_new.updateProperties(properties);
-		}catch (Exception e) {
-			e.printStackTrace(res.getWriter());
-		}
-    	
-    	document_new.applyAcl(addAcl, null, AclPropagation.OBJECTONLY);
+		// add and remove the ACEs at the folder
+		// folder.applyAcl(addAcl, removeAcl, AclPropagation.OBJECTONLY);
+		Document document = getDocumentByPath(res, "/file1");
+		document.applyAcl(addAcl, removeAcl, AclPropagation.OBJECTONLY);
+
+		createDocument(res, "acldocument_test_2.txt", "acl_user_1");
+
+		addAcl = new ArrayList<Ace>();
+
+		// build and add ACE for user U1
+		permissionsUser1 = new ArrayList<String>();
+		permissionsUser1.add("cmis:all");
+		Ace aceACLUser1 = session.getObjectFactory().createAce("acl_user_1", permissionsUser1);
+		addAcl.add(aceACLUser1);
+
+		Document document_new = getDocumentByPath(res, "/acldocument_test_2.txt");
+
+
+		document_new.applyAcl(addAcl, null, AclPropagation.OBJECTONLY);
 	}
-	
+
 	public static void getACLcapabilities(HttpServletResponse res) throws IOException {
 		Session session = getCmisSession(res);
 
@@ -367,21 +359,22 @@ public class DocumentServiceAdapter {
 			res.getWriter().println("ECM not found, the session is null");
 			return;
 		}
-		
+
 		res.getWriter().println("getting ACL capabilities<br>");
 		AclCapabilities aclCapabilities = session.getRepositoryInfo().getAclCapabilities();
 
-		res.getWriter().println("Propogation for this repository is " + aclCapabilities.getAclPropagation().toString() + "<br>");
+		res.getWriter().println(
+				"Propogation for this repository is " + aclCapabilities.getAclPropagation().toString() + "<br>");
 
 		res.getWriter().println("permissions for this repository are: <br>");
 		for (PermissionDefinition definition : aclCapabilities.getPermissions()) {
-			res.getWriter().println(definition.toString() + "<br>");                
+			res.getWriter().println(definition.toString() + "<br>");
 		}
 
 		res.getWriter().println("\npermission mappings for this repository are: <br>");
 		Map<String, PermissionMapping> repoMapping = aclCapabilities.getPermissionMapping();
-		for (String key: repoMapping.keySet()) {
-			res.getWriter().println(key + " maps to " + repoMapping.get(key).getPermissions() + "<br>");                
+		for (String key : repoMapping.keySet()) {
+			res.getWriter().println(key + " maps to " + repoMapping.get(key).getPermissions() + "<br>");
 		}
 	}
 
@@ -408,7 +401,7 @@ public class DocumentServiceAdapter {
 
 				// create session
 				cmisSession = factory.createSession(parameters);
-				
+
 			} catch (Exception e) {
 				response.getWriter()
 						.println("<div style='color:red'>There was an error in retrieving the CMIS Session</div>");
