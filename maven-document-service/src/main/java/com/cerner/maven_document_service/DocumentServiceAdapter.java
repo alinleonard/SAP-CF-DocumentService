@@ -5,6 +5,7 @@ import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
@@ -24,7 +25,12 @@ import org.apache.chemistry.opencmis.client.runtime.SessionFactoryImpl;
 import org.apache.chemistry.opencmis.client.util.ContentStreamUtils;
 import org.apache.chemistry.opencmis.commons.PropertyIds;
 import org.apache.chemistry.opencmis.commons.SessionParameter;
+import org.apache.chemistry.opencmis.commons.data.Ace;
+import org.apache.chemistry.opencmis.commons.data.AclCapabilities;
 import org.apache.chemistry.opencmis.commons.data.ContentStream;
+import org.apache.chemistry.opencmis.commons.data.PermissionMapping;
+import org.apache.chemistry.opencmis.commons.definitions.PermissionDefinition;
+import org.apache.chemistry.opencmis.commons.enums.AclPropagation;
 import org.apache.chemistry.opencmis.commons.enums.BindingType;
 import org.apache.chemistry.opencmis.commons.enums.VersioningState;
 import org.apache.chemistry.opencmis.commons.exceptions.CmisNameConstraintViolationException;
@@ -123,6 +129,40 @@ public class DocumentServiceAdapter {
 		}
 
 	}
+	
+	public static void createDocument(HttpServletResponse response, String documentNameWithExtension, String createdBy)
+			throws IOException {
+
+		Session session = getCmisSession(response);
+
+		if (session == null) {
+			response.getWriter().println("ECM not found, the session is null");
+			return;
+		}
+
+		response.getWriter().println("<h3 style='color:blue'>createDocument</h3>");
+
+		// access the root folder of the repository
+		Folder root = session.getRootFolder();
+
+		// create a new file in the root folder
+		Map<String, Object> properties = new HashMap<String, Object>();
+		properties.put(PropertyIds.OBJECT_TYPE_ID, "cmis:document");
+		properties.put(PropertyIds.NAME, documentNameWithExtension);
+		properties.put(PropertyIds.CREATED_BY, createdBy);
+		properties.put("project:string", "red");
+		properties.put("project:number", 1234);
+
+		
+		
+		try {
+			root.createDocument(properties, null, VersioningState.NONE);
+		} catch (Exception e) {
+			// Document exists already, nothing to do
+			e.printStackTrace(response.getWriter());
+		} 
+
+	}
 
 	public static void createDocumentAsBytes(HttpServletResponse response, String filename) throws IOException {
 		// https://chemistry.apache.org/docs/cmis-samples/samples/content/index.html
@@ -176,7 +216,7 @@ public class DocumentServiceAdapter {
 			for (org.apache.chemistry.opencmis.client.api.Property<?> p : props) {
 				response.getWriter().println(p.getDefinition().getDisplayName() + "=" + p.getValuesAsString() + "<br>");
 			}
-			
+		
 			response.getWriter().printf("Content: %s", 
 					getStringFromInputStream(response, stream));
 			
@@ -187,6 +227,26 @@ public class DocumentServiceAdapter {
 			displayFolderStructure(response, folder);
 		} else {
 			response.getWriter().println("Unknown or not exist object");
+		}
+	}
+	
+	private static Document getDocumentByPath(HttpServletResponse response, String path) throws IOException {
+		Session session = getCmisSession(response);
+
+		if (session == null) {
+			response.getWriter().println("ECM not found, the session is null");
+			return null;
+		}
+
+		CmisObject cmisObject = session.getObjectByPath(path);
+
+		if (cmisObject instanceof Document) {
+			Document document = (Document) cmisObject;
+			return document;
+		} else if (cmisObject instanceof Folder) {
+			return null;
+		} else {
+			return null;
 		}
 	}
 
@@ -231,6 +291,89 @@ public class DocumentServiceAdapter {
 		res.getWriter().println("</ul>");
 
 	}
+	
+	public static void setACLdummy(HttpServletResponse res) throws IOException {
+		Session session = getCmisSession(res);
+
+		if (session == null) {
+			res.getWriter().println("ECM not found, the session is null");
+			return;
+		}
+		
+		String userIdOfUser1 = "user_1";
+    	String userIdOfUser2 = "user_2";
+
+    	// list of ACEs which should be added
+    	List<Ace> addAcl = new ArrayList<Ace>();
+
+    	// build and add ACE for user U1
+    	List<String> permissionsUser1 = new ArrayList<String>();
+    		permissionsUser1.add("cmis:all");
+    	Ace aceUser1 = session.getObjectFactory().createAce(userIdOfUser1, 
+    	    	permissionsUser1);
+    	addAcl.add(aceUser1);
+
+    	// build and add ACE for user U2
+    	List<String> permissionsUser2 = new ArrayList<String>();
+    		permissionsUser2.add("cmis:read");
+    	Ace aceUser2 = session.getObjectFactory().createAce(userIdOfUser2, 
+    		permissionsUser1);
+    	addAcl.add(aceUser2);
+
+    	// list of ACEs which should be removed
+    	List<Ace> removeAcl = new ArrayList<Ace>();
+
+    	// build and add ACE for user {sap:builtin}everyone
+    	List<String> permissionsEveryone = new ArrayList<String>();
+    		permissionsEveryone.add("cmis:all");
+    	Ace aceEveryone = session.getObjectFactory().createAce(
+    	    	"{sap:builtin}everyone", permissionsEveryone);
+    	removeAcl.add(aceEveryone);
+    
+    	// add and remove the ACEs at the folder
+    	//folder.applyAcl(addAcl, removeAcl, AclPropagation.OBJECTONLY);
+   		Document document = getDocumentByPath(res, "/file1");
+   		document.applyAcl(addAcl, removeAcl, AclPropagation.OBJECTONLY);
+   		
+   		createDocument(res, "acldocument_test_2.txt", "acl_user_1");
+   		
+   		addAcl = new ArrayList<Ace>();
+
+    	// build and add ACE for user U1
+    	permissionsUser1 = new ArrayList<String>();
+    	permissionsUser1.add("cmis:all");
+    	Ace aceACLUser1 = session.getObjectFactory().createAce("acl_user_1", 
+    	    	permissionsUser1);
+    	addAcl.add(aceACLUser1);
+    	
+    	Document document_new = getDocumentByPath(res, "/acldocument_test_2.txt");
+    	document_new.applyAcl(addAcl, null, AclPropagation.OBJECTONLY);
+	}
+	
+	public static void getACLcapabilities(HttpServletResponse res) throws IOException {
+		Session session = getCmisSession(res);
+
+		if (session == null) {
+			res.getWriter().println("ECM not found, the session is null");
+			return;
+		}
+		
+		res.getWriter().println("getting ACL capabilities<br>");
+		AclCapabilities aclCapabilities = session.getRepositoryInfo().getAclCapabilities();
+
+		res.getWriter().println("Propogation for this repository is " + aclCapabilities.getAclPropagation().toString() + "<br>");
+
+		res.getWriter().println("permissions for this repository are: <br>");
+		for (PermissionDefinition definition : aclCapabilities.getPermissions()) {
+			res.getWriter().println(definition.toString() + "<br>");                
+		}
+
+		res.getWriter().println("\npermission mappings for this repository are: <br>");
+		Map<String, PermissionMapping> repoMapping = aclCapabilities.getPermissionMapping();
+		for (String key: repoMapping.keySet()) {
+			res.getWriter().println(key + " maps to " + repoMapping.get(key).getPermissions() + "<br>");                
+		}
+	}
 
 	public static Session getCmisSession(HttpServletResponse response) throws IOException {
 		if (response == null)
@@ -255,7 +398,7 @@ public class DocumentServiceAdapter {
 
 				// create session
 				cmisSession = factory.createSession(parameters);
-
+				
 			} catch (Exception e) {
 				response.getWriter()
 						.println("<div style='color:red'>There was an error in retrieving the CMIS Session</div>");

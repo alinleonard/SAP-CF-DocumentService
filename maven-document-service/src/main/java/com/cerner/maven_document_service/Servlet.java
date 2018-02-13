@@ -115,7 +115,13 @@ public class Servlet extends HttpServlet  {
 			}
 			if(req.getParameter("dObject") != null) {
 				DocumentServiceAdapter.getObjectByPath(res, req.getParameter("dObject"));
-			}	
+			}
+			if(req.getParameter("acl") != null) {
+				DocumentServiceAdapter.getACLcapabilities(res);
+			}
+			if(req.getParameter("acldummy") != null) {
+				DocumentServiceAdapter.setACLdummy(res);
+			}
 		} catch (Exception e) {
 			res.getWriter().printf("Error: %s", e.getMessage());
 		}
