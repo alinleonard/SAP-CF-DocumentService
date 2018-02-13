@@ -18,11 +18,13 @@ import org.apache.chemistry.opencmis.client.api.Document;
 import org.apache.chemistry.opencmis.client.api.FileableCmisObject;
 import org.apache.chemistry.opencmis.client.api.Folder;
 import org.apache.chemistry.opencmis.client.api.ItemIterable;
+import org.apache.chemistry.opencmis.client.api.OperationContext;
 import org.apache.chemistry.opencmis.client.api.QueryResult;
 import org.apache.chemistry.opencmis.client.api.Session;
 import org.apache.chemistry.opencmis.client.api.SessionFactory;
 import org.apache.chemistry.opencmis.client.runtime.SessionFactoryImpl;
 import org.apache.chemistry.opencmis.client.util.ContentStreamUtils;
+import org.apache.chemistry.opencmis.client.util.OperationContextUtils;
 import org.apache.chemistry.opencmis.commons.PropertyIds;
 import org.apache.chemistry.opencmis.commons.SessionParameter;
 import org.apache.chemistry.opencmis.commons.data.Ace;
@@ -150,10 +152,6 @@ public class DocumentServiceAdapter {
 		properties.put(PropertyIds.OBJECT_TYPE_ID, "cmis:document");
 		properties.put(PropertyIds.NAME, documentNameWithExtension);
 		properties.put(PropertyIds.CREATED_BY, createdBy);
-		properties.put("project:string", "red");
-		properties.put("project:number", 1234);
-
-		
 		
 		try {
 			root.createDocument(properties, null, VersioningState.NONE);
@@ -237,8 +235,9 @@ public class DocumentServiceAdapter {
 			response.getWriter().println("ECM not found, the session is null");
 			return null;
 		}
-
-		CmisObject cmisObject = session.getObjectByPath(path);
+		
+		OperationContext oc3 = OperationContextUtils.createMaximumOperationContext();
+		CmisObject cmisObject = session.getObjectByPath(path, oc3);
 
 		if (cmisObject instanceof Document) {
 			Document document = (Document) cmisObject;
@@ -347,6 +346,17 @@ public class DocumentServiceAdapter {
     	addAcl.add(aceACLUser1);
     	
     	Document document_new = getDocumentByPath(res, "/acldocument_test_2.txt");
+    	
+    	Map<String, Object> properties = new HashMap<String, Object>();
+		properties.put("project:string", "red");
+		properties.put("project:number", 1234);
+		// create an operation context that selects everything
+		try {
+    	document_new.updateProperties(properties);
+		}catch (Exception e) {
+			e.printStackTrace(res.getWriter());
+		}
+    	
     	document_new.applyAcl(addAcl, null, AclPropagation.OBJECTONLY);
 	}
 	
