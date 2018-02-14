@@ -8,6 +8,7 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -18,6 +19,7 @@ import org.apache.chemistry.opencmis.client.api.Document;
 import org.apache.chemistry.opencmis.client.api.FileableCmisObject;
 import org.apache.chemistry.opencmis.client.api.Folder;
 import org.apache.chemistry.opencmis.client.api.ItemIterable;
+import org.apache.chemistry.opencmis.client.api.ObjectType;
 import org.apache.chemistry.opencmis.client.api.OperationContext;
 import org.apache.chemistry.opencmis.client.api.QueryResult;
 import org.apache.chemistry.opencmis.client.api.Session;
@@ -32,6 +34,8 @@ import org.apache.chemistry.opencmis.commons.data.AclCapabilities;
 import org.apache.chemistry.opencmis.commons.data.ContentStream;
 import org.apache.chemistry.opencmis.commons.data.PermissionMapping;
 import org.apache.chemistry.opencmis.commons.definitions.PermissionDefinition;
+import org.apache.chemistry.opencmis.commons.definitions.PropertyDefinition;
+import org.apache.chemistry.opencmis.commons.definitions.TypeDefinition;
 import org.apache.chemistry.opencmis.commons.enums.AclPropagation;
 import org.apache.chemistry.opencmis.commons.enums.BindingType;
 import org.apache.chemistry.opencmis.commons.enums.VersioningState;
@@ -156,8 +160,13 @@ public class DocumentServiceAdapter {
 		properties.put(PropertyIds.NAME, documentNameWithExtension);
 		properties.put(PropertyIds.CREATED_BY, createdBy);
 		// custom meta data
-		properties.put("project:string", "red");
-		properties.put("project:number", 1234);
+		properties.put("test:string", "red");
+		//properties.put("test:number", 1234);
+		
+		TypeDefinition typedef =  session.getTypeDefinition("cmis:document");
+		Map<String, String> propertyDefinitions = new LinkedHashMap<String, String>();
+		propertyDefinitions.put("test:string", "red");
+		ObjectType updatedType = session.updateType(typedef);
 
 		try {
 			root.createDocument(properties, null, VersioningState.NONE);
